@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="5.009" tests="15" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/api-tests/target/test-classes:/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/api-tests/target/classes:/home/runner/.m2/repository/io/rest-assured/rest-assured/5.5.0/rest-assured-5.5.0.jar:/home/runner/.m2/repository/org/apache/groovy/groovy/4.0.22/groovy-4.0.22.jar:/home/runner/.m2/repository/org/apache/groovy/groovy-xml/4.0.22/groovy-xml-4.0.22.jar:/home/runner/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/runner/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/home/runner/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/runner/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/home/runner/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/home/runner/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/runner/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/runner/.m2/repository/io/rest-assured/json-path/5.5.0/json-path-5.5.0.jar:/home/runner/.m2/repository/org/apache/groovy/groovy-json/4.0.22/groovy-json-4.0.22.jar:/home/runner/.m2/repository/io/rest-assured/rest-assured-common/5.5.0/rest-assured-common-5.5.0.jar:/home/runner/.m2/repository/io/rest-assured/xml-path/5.5.0/xml-path-5.5.0.jar:/home/runner/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/home/runner/.m2/repository/org/jsoup/jsoup/1.18.3/jsoup-1.18.3.jar:/home/runner/.m2/repository/org/testng/testng/7.10.2/testng-7.10.2.jar:/home/runner/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/home/runner/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/home/runner/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.18.2/jackson-databind-2.18.2.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.2/jackson-annotations-2.18.2.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.2/jackson-core-2.18.2.jar:/home/runner/.m2/repository/io/qameta/allure/allure-testng/2.29.1/allure-testng-2.29.1.jar:/home/runner/.m2/repository/io/qameta/allure/allure-java-commons/2.29.1/allure-java-commons-2.29.1.jar:/home/runner/.m2/repository/io/qameta/allure/allure-model/2.29.1/allure-model-2.29.1.jar:/home/runner/.m2/repository/io/qameta/allure/allure-test-filter/2.29.1/allure-test-filter-2.29.1.jar:/home/runner/.m2/repository/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Etc/UTC"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/temurin-17-jdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/api-tests/target/surefire/surefirebooter-20261007112456755_3.jar /home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/api-tests/target/surefire 2026-10-07T11-24-56_697-jvmRun1 surefire-20261007112456755_1tmp surefire_0-20261007112456755_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/api-tests/target/test-classes:/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/api-tests/target/classes:/home/runner/.m2/repository/io/rest-assured/rest-assured/5.5.0/rest-assured-5.5.0.jar:/home/runner/.m2/repository/org/apache/groovy/groovy/4.0.22/groovy-4.0.22.jar:/home/runner/.m2/repository/org/apache/groovy/groovy-xml/4.0.22/groovy-xml-4.0.22.jar:/home/runner/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/runner/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/home/runner/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/runner/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/home/runner/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/home/runner/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/runner/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/runner/.m2/repository/io/rest-assured/json-path/5.5.0/json-path-5.5.0.jar:/home/runner/.m2/repository/org/apache/groovy/groovy-json/4.0.22/groovy-json-4.0.22.jar:/home/runner/.m2/repository/io/rest-assured/rest-assured-common/5.5.0/rest-assured-common-5.5.0.jar:/home/runner/.m2/repository/io/rest-assured/xml-path/5.5.0/xml-path-5.5.0.jar:/home/runner/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/home/runner/.m2/repository/org/jsoup/jsoup/1.18.3/jsoup-1.18.3.jar:/home/runner/.m2/repository/org/testng/testng/7.10.2/testng-7.10.2.jar:/home/runner/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/home/runner/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/home/runner/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.18.2/jackson-databind-2.18.2.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.2/jackson-annotations-2.18.2.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.2/jackson-core-2.18.2.jar:/home/runner/.m2/repository/io/qameta/allure/allure-testng/2.29.1/allure-testng-2.29.1.jar:/home/runner/.m2/repository/io/qameta/allure/allure-java-commons/2.29.1/allure-java-commons-2.29.1.jar:/home/runner/.m2/repository/io/qameta/allure/allure-model/2.29.1/allure-model-2.29.1.jar:/home/runner/.m2/repository/io/qameta/allure/allure-test-filter/2.29.1/allure-test-filter-2.29.1.jar:/home/runner/.m2/repository/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar:"/>
+    <property name="allure.results.directory" value="target/allure-results"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/runner"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-08-18"/>
+    <property name="java.home" value="/usr/lib/jvm/temurin-17-jdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/api-tests"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/api-tests/target/surefire/surefirebooter-20261007112456755_3.jar"/>
+    <property name="seed" value="43"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.20.1+1"/>
+    <property name="user.name" value="runner"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.17.0-1022-azure"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-17.0.20.1+1"/>
+    <property name="localRepository" value="/home/runner/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="17.0.20.1"/>
+    <property name="user.dir" value="/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/api-tests"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="17.0.20.1+1"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="transactionSearch" classname="qa.api.BankTests" time="0.138">
+    <system-out><![CDATA[{"event":"random-order","seed":43}
+{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/14321/accounts","status":200}
+{"event":"http","method":"POST","path":"deposit","status":200}
+{"event":"http","method":"POST","path":"withdraw","status":200}
+{"event":"http","method":"GET","path":"accounts/16119/transactions/amount/12.34","status":200}
+{"event":"http","method":"GET","path":"accounts/16119/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/16119/transactions/month/31/type/Credit","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="movementAndLedger" classname="qa.api.BankTests" time="0.61">
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/14432/accounts","status":200}
+{"event":"http","method":"GET","path":"accounts/16230","status":200}
+{"event":"http","method":"POST","path":"createAccount","status":200}
+{"event":"http","method":"GET","path":"accounts/16341","status":200}
+{"event":"http","method":"GET","path":"accounts/16230","status":200}
+{"event":"http","method":"POST","path":"createAccount","status":200}
+{"event":"http","method":"GET","path":"accounts/16452","status":200}
+{"event":"http","method":"GET","path":"accounts/16230","status":200}
+{"event":"http","method":"POST","path":"deposit","status":200}
+{"event":"http","method":"GET","path":"accounts/16341","status":200}
+{"event":"http","method":"GET","path":"accounts/16452","status":200}
+{"event":"http","method":"POST","path":"transfer","status":200}
+{"event":"http","method":"GET","path":"accounts/16341","status":200}
+{"event":"http","method":"GET","path":"accounts/16452","status":200}
+{"event":"http","method":"POST","path":"billpay","status":200}
+{"event":"http","method":"GET","path":"accounts/16341","status":200}
+{"event":"http","method":"GET","path":"accounts/16452","status":200}
+{"event":"http","method":"GET","path":"accounts/16341/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/16341","status":200}
+{"event":"http","method":"GET","path":"accounts/16452/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/16452","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="negativeDepositCannotReduceBalance" classname="qa.api.BankTests" time="0.057">
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/14654/accounts","status":200}
+{"event":"http","method":"GET","path":"accounts/16674","status":200}
+{"event":"http","method":"POST","path":"deposit","status":400}
+{"event":"http","method":"GET","path":"accounts/16674","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="invalidTransfers[insufficient, 999999.00](1)" classname="qa.api.BankTests" time="0.135">
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/14765/accounts","status":200}
+{"event":"http","method":"POST","path":"createAccount","status":200}
+{"event":"http","method":"GET","path":"accounts/16785","status":200}
+{"event":"http","method":"GET","path":"accounts/16785/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/16896","status":200}
+{"event":"http","method":"GET","path":"accounts/16896/transactions","status":200}
+{"event":"http","method":"POST","path":"transfer","status":400}
+{"event":"http","method":"GET","path":"accounts/16785","status":200}
+{"event":"http","method":"GET","path":"accounts/16785/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/16896","status":200}
+{"event":"http","method":"GET","path":"accounts/16896/transactions","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="invalidTransfers[negative, -1.00](2)" classname="qa.api.BankTests" time="0.231">
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/14876/accounts","status":200}
+{"event":"http","method":"POST","path":"createAccount","status":200}
+{"event":"http","method":"GET","path":"accounts/17007","status":200}
+{"event":"http","method":"GET","path":"accounts/17007/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/17118","status":200}
+{"event":"http","method":"GET","path":"accounts/17118/transactions","status":200}
+{"event":"http","method":"POST","path":"transfer","status":400}
+{"event":"http","method":"GET","path":"accounts/17007","status":200}
+{"event":"http","method":"GET","path":"accounts/17007/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/17118","status":200}
+{"event":"http","method":"GET","path":"accounts/17118/transactions","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="invalidTransfers[zero, 0](3)" classname="qa.api.BankTests" time="0.184">
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/14987/accounts","status":200}
+{"event":"http","method":"POST","path":"createAccount","status":200}
+{"event":"http","method":"GET","path":"accounts/17229","status":200}
+{"event":"http","method":"GET","path":"accounts/17229/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/17340","status":200}
+{"event":"http","method":"GET","path":"accounts/17340/transactions","status":200}
+{"event":"http","method":"POST","path":"transfer","status":400}
+{"event":"http","method":"GET","path":"accounts/17229","status":200}
+{"event":"http","method":"GET","path":"accounts/17229/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/17340","status":200}
+{"event":"http","method":"GET","path":"accounts/17340/transactions","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="invalidTransfers[nonnumeric, abc](4)" classname="qa.api.BankTests" time="0.131">
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/15098/accounts","status":200}
+{"event":"http","method":"POST","path":"createAccount","status":200}
+{"event":"http","method":"GET","path":"accounts/17451","status":200}
+{"event":"http","method":"GET","path":"accounts/17451/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/17562","status":200}
+{"event":"http","method":"GET","path":"accounts/17562/transactions","status":200}
+{"event":"http","method":"POST","path":"transfer","status":400}
+{"event":"http","method":"GET","path":"accounts/17451","status":200}
+{"event":"http","method":"GET","path":"accounts/17451/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/17562","status":200}
+{"event":"http","method":"GET","path":"accounts/17562/transactions","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="invalidTransfers[missing-target, 1.00](5)" classname="qa.api.BankTests" time="0.06">
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/15209/accounts","status":200}
+{"event":"http","method":"GET","path":"accounts/17673","status":200}
+{"event":"http","method":"GET","path":"accounts/17673/transactions","status":200}
+{"event":"http","method":"POST","path":"transfer","status":400}
+{"event":"http","method":"GET","path":"accounts/17673","status":200}
+{"event":"http","method":"GET","path":"accounts/17673/transactions","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="concurrentWithdrawals" classname="qa.api.BankTests" time="0.181">
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/15320/accounts","status":200}
+{"event":"http","method":"GET","path":"accounts/17784","status":200}
+{"event":"http","method":"POST","path":"withdraw","status":200}
+{"event":"http","method":"POST","path":"withdraw","status":200}
+{"event":"http","method":"POST","path":"withdraw","status":200}
+{"event":"http","method":"POST","path":"withdraw","status":200}
+{"event":"http","method":"POST","path":"withdraw","status":200}
+{"event":"http","method":"POST","path":"withdraw","status":400}
+{"event":"http","method":"POST","path":"withdraw","status":400}
+{"event":"http","method":"POST","path":"withdraw","status":400}
+{"event":"http","method":"POST","path":"withdraw","status":400}
+{"event":"http","method":"POST","path":"withdraw","status":400}
+{"event":"http","method":"GET","path":"accounts/17784","status":200}
+{"event":"http","method":"GET","path":"accounts/17784/transactions","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="crossCustomerTransfer" classname="qa.api.BankTests" time="0.14">
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/15431/accounts","status":200}
+{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/15542/accounts","status":200}
+{"event":"http","method":"GET","path":"accounts/18006","status":200}
+{"event":"http","method":"GET","path":"accounts/17895","status":200}
+{"event":"http","method":"POST","path":"transfer","status":403}
+{"event":"http","method":"GET","path":"accounts/18006","status":200}
+{"event":"http","method":"GET","path":"accounts/17895","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="negativeWithdrawalCannotIncreaseBalance" classname="qa.api.BankTests" time="0.075">
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/15653/accounts","status":200}
+{"event":"http","method":"GET","path":"accounts/18117","status":200}
+{"event":"http","method":"POST","path":"withdraw","status":400}
+{"event":"http","method":"GET","path":"accounts/18117","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="registrationAndIdentity" classname="qa.api.BankTests" time="0.045">
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/15764/accounts","status":200}
+{"event":"http","method":"GET","path":"customers/15764","status":200}
+{"event":"http","method":"GET","path":"accounts/18228","status":200}
+{"event":"http","method":"GET","path":"accounts/18228","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="crossCustomerTransactionRead" classname="qa.api.BankTests" time="0.103">
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/15986/accounts","status":200}
+{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/16097/accounts","status":200}
+{"event":"http","method":"POST","path":"deposit","status":200}
+{"event":"http","method":"GET","path":"accounts/18561/transactions","status":403}
+]]></system-out>
+  </testcase>
+  <testcase name="deployedXmlSchema" classname="qa.api.ContractTests" time="0.147">
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/14543/accounts","status":200}
+{"event":"http","method":"GET","path":"?_wadl","status":200}
+{"event":"http","method":"GET","path":"accounts/16563","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="jsonXmlParity" classname="qa.api.ContractTests" time="0.075">
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/15875/accounts","status":200}
+{"event":"http","method":"GET","path":"customers/15875","status":200}
+{"event":"http","method":"GET","path":"customers/15875","status":200}
+{"event":"http","method":"GET","path":"accounts/18339","status":200}
+{"event":"http","method":"GET","path":"accounts/18339","status":200}
+{"event":"http","method":"GET","path":"accounts/18339/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/18339/transactions","status":200}
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,13 @@
+{
+  "tests": 42,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": 42,
+  "pass_rate": 100.0,
+  "first_attempt_rate": 100.0,
+  "runs": 6,
+  "missing_runs": 0,
+  "matrix_issues": [],
+  "target_met": true
+}

@@ -12,10 +12,10 @@ The optional local ParaBank patch fixes the demonstrated banking defects. **Pass
 
 ## Verification
 
-- [Hosted API run](https://github.com/PIYUSHGUPTAKTL/antique-network-qa-assignment/actions/runs/37611113628): 45/45 passed on JDK 17 before this review's stricter oracles.
-- [Hosted UI run](https://github.com/PIYUSHGUPTAKTL/antique-network-qa-assignment/actions/runs/37611113458): all seven scenarios, Chrome/Firefox three attempts each, 42/42 passed (100%).
+- [Post-review hosted API run](https://github.com/PIYUSHGUPTAKTL/antique-network-qa-assignment/actions/runs/37613748663): **48/48 passed** on JDK 17, including 16 framework regressions, both 15-case seeds, loans and reset.
+- [Post-review hosted UI run](https://github.com/PIYUSHGUPTAKTL/antique-network-qa-assignment/actions/runs/37613748667): all seven scenarios, Chrome/Firefox three attempts each, **42/42 passed (100%)**. Each browser job also passed 8 framework and 7 report utility checks.
 - [Earlier complete local report](run-report/Full_Project_Run_Report.html), also [PDF](run-report/Full_Project_Run_Report.pdf): 67 project executions, 33 boundary checks and five reporting checks passed. These are historical counts; the review adds regression checks.
-- Latest post-review results are recorded in [Reviewer_Report.html](run-report/Reviewer_Report.html). Counts are executions, not unique designs; original failed evidence remains under `evidence/`.
+- Post-review hosted totals: **106/106 Maven/TestNG executions** plus 14 Python check executions (seven checks in each browser job), zero failures/errors/skips. The tested source commit is `077384f`. Detailed results are recorded in [Reviewer_Report.html](run-report/Reviewer_Report.html). Counts are executions, not unique designs; original failed evidence remains under `evidence/`.
 
 ## Prerequisites
 

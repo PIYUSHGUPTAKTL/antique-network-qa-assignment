@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="2.206" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/api-tests/target/test-classes:/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/api-tests/target/classes:/home/runner/.m2/repository/io/rest-assured/rest-assured/5.5.0/rest-assured-5.5.0.jar:/home/runner/.m2/repository/org/apache/groovy/groovy/4.0.22/groovy-4.0.22.jar:/home/runner/.m2/repository/org/apache/groovy/groovy-xml/4.0.22/groovy-xml-4.0.22.jar:/home/runner/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/runner/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/home/runner/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/runner/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/home/runner/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/home/runner/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/runner/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/runner/.m2/repository/io/rest-assured/json-path/5.5.0/json-path-5.5.0.jar:/home/runner/.m2/repository/org/apache/groovy/groovy-json/4.0.22/groovy-json-4.0.22.jar:/home/runner/.m2/repository/io/rest-assured/rest-assured-common/5.5.0/rest-assured-common-5.5.0.jar:/home/runner/.m2/repository/io/rest-assured/xml-path/5.5.0/xml-path-5.5.0.jar:/home/runner/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/home/runner/.m2/repository/org/jsoup/jsoup/1.18.3/jsoup-1.18.3.jar:/home/runner/.m2/repository/org/testng/testng/7.10.2/testng-7.10.2.jar:/home/runner/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/home/runner/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/home/runner/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.18.2/jackson-databind-2.18.2.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.2/jackson-annotations-2.18.2.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.2/jackson-core-2.18.2.jar:/home/runner/.m2/repository/io/qameta/allure/allure-testng/2.29.1/allure-testng-2.29.1.jar:/home/runner/.m2/repository/io/qameta/allure/allure-java-commons/2.29.1/allure-java-commons-2.29.1.jar:/home/runner/.m2/repository/io/qameta/allure/allure-model/2.29.1/allure-model-2.29.1.jar:/home/runner/.m2/repository/io/qameta/allure/allure-test-filter/2.29.1/allure-test-filter-2.29.1.jar:/home/runner/.m2/repository/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Etc/UTC"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/temurin-17-jdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/api-tests/target/surefire/surefirebooter-20261007112511082_3.jar /home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/api-tests/target/surefire 2026-10-07T11-25-11_029-jvmRun1 surefire-20261007112511082_1tmp surefire_0-20261007112511082_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/api-tests/target/test-classes:/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/api-tests/target/classes:/home/runner/.m2/repository/io/rest-assured/rest-assured/5.5.0/rest-assured-5.5.0.jar:/home/runner/.m2/repository/org/apache/groovy/groovy/4.0.22/groovy-4.0.22.jar:/home/runner/.m2/repository/org/apache/groovy/groovy-xml/4.0.22/groovy-xml-4.0.22.jar:/home/runner/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/runner/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/home/runner/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/runner/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/home/runner/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/home/runner/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/runner/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/runner/.m2/repository/io/rest-assured/json-path/5.5.0/json-path-5.5.0.jar:/home/runner/.m2/repository/org/apache/groovy/groovy-json/4.0.22/groovy-json-4.0.22.jar:/home/runner/.m2/repository/io/rest-assured/rest-assured-common/5.5.0/rest-assured-common-5.5.0.jar:/home/runner/.m2/repository/io/rest-assured/xml-path/5.5.0/xml-path-5.5.0.jar:/home/runner/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/home/runner/.m2/repository/org/jsoup/jsoup/1.18.3/jsoup-1.18.3.jar:/home/runner/.m2/repository/org/testng/testng/7.10.2/testng-7.10.2.jar:/home/runner/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/home/runner/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/home/runner/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.18.2/jackson-databind-2.18.2.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.2/jackson-annotations-2.18.2.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.2/jackson-core-2.18.2.jar:/home/runner/.m2/repository/io/qameta/allure/allure-testng/2.29.1/allure-testng-2.29.1.jar:/home/runner/.m2/repository/io/qameta/allure/allure-java-commons/2.29.1/allure-java-commons-2.29.1.jar:/home/runner/.m2/repository/io/qameta/allure/allure-model/2.29.1/allure-model-2.29.1.jar:/home/runner/.m2/repository/io/qameta/allure/allure-test-filter/2.29.1/allure-test-filter-2.29.1.jar:/home/runner/.m2/repository/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar:"/>
+    <property name="allure.results.directory" value="target/allure-results"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/runner"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-08-18"/>
+    <property name="java.home" value="/usr/lib/jvm/temurin-17-jdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/api-tests"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/api-tests/target/surefire/surefirebooter-20261007112511082_3.jar"/>
+    <property name="seed" value="42"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.20.1+1"/>
+    <property name="user.name" value="runner"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.17.0-1022-azure"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-17.0.20.1+1"/>
+    <property name="localRepository" value="/home/runner/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="17.0.20.1"/>
+    <property name="user.dir" value="/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/api-tests"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="groups" value="reset"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="17.0.20.1+1"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="midRunResetClassified" classname="qa.api.LocalTests" time="1.761">
+    <system-out><![CDATA[{"event":"random-order","seed":42}
+{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/17096/accounts","status":200}
+{"event":"http","method":"GET","path":"customers/17096","status":200}
+{"event":"http","method":"POST","path":"cleanDB","status":204}
+{"event":"http","method":"GET","path":"customers/17096","status":400}
+{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":400}
+{"event":"http","method":"POST","path":"initializeDB","status":204}
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,163 @@
+{
+  "tested_commit": "077384f18c8ad852132553833bb5bd0955645430",
+  "api": {
+    "tests": 48,
+    "passed": 48,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "unit_tests": 16,
+    "integration_seed_tests": 30,
+    "loan_scenarios": 1,
+    "reset_scenarios": 1,
+    "url": "https://github.com/PIYUSHGUPTAKTL/antique-network-qa-assignment/actions/runs/37613748663",
+    "workflow": {
+      "id": 37613748663,
+      "name": "API repeatability",
+      "head_sha": "077384f18c8ad852132553833bb5bd0955645430",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/PIYUSHGUPTAKTL/antique-network-qa-assignment/actions/runs/37613748663",
+      "created_at": "2026-10-07T11:23:26Z",
+      "updated_at": "2026-10-07T11:25:34Z"
+    }
+  },
+  "ui": {
+    "tests": 42,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 42,
+    "pass_rate": 100.0,
+    "first_attempt_rate": 100.0,
+    "runs": 6,
+    "missing_runs": 0,
+    "matrix_issues": [],
+    "target_met": true,
+    "url": "https://github.com/PIYUSHGUPTAKTL/antique-network-qa-assignment/actions/runs/37613748667",
+    "workflow": {
+      "id": 37613748667,
+      "name": "UI browser reliability",
+      "head_sha": "077384f18c8ad852132553833bb5bd0955645430",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/PIYUSHGUPTAKTL/antique-network-qa-assignment/actions/runs/37613748667",
+      "created_at": "2026-10-07T11:23:26Z",
+      "updated_at": "2026-10-07T11:28:54Z"
+    },
+    "framework_tests_per_browser": 8,
+    "report_utility_checks_per_browser": 7
+  },
+  "raw_integration_results": [
+    {
+      "kind": "api",
+      "attempt": "api-42",
+      "artifact_id": 11479301737,
+      "artifact_sha256": "0e04d3e21c1fb57dccc13725558abc2a5cb1086dee651064825938339c349122",
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "kind": "api",
+      "attempt": "api-43",
+      "artifact_id": 11479301737,
+      "artifact_sha256": "0e04d3e21c1fb57dccc13725558abc2a5cb1086dee651064825938339c349122",
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "kind": "api",
+      "attempt": "loans",
+      "artifact_id": 11479301737,
+      "artifact_sha256": "0e04d3e21c1fb57dccc13725558abc2a5cb1086dee651064825938339c349122",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "kind": "api",
+      "attempt": "reset",
+      "artifact_id": 11479301737,
+      "artifact_sha256": "0e04d3e21c1fb57dccc13725558abc2a5cb1086dee651064825938339c349122",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "kind": "ui",
+      "attempt": "chrome-1",
+      "artifact_id": 11479272420,
+      "artifact_sha256": "41b3e6e43594d3f3cd417adf1527d7157f773150721614977a3fde5016684d42",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "kind": "ui",
+      "attempt": "chrome-2",
+      "artifact_id": 11479272420,
+      "artifact_sha256": "41b3e6e43594d3f3cd417adf1527d7157f773150721614977a3fde5016684d42",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "kind": "ui",
+      "attempt": "chrome-3",
+      "artifact_id": 11479272420,
+      "artifact_sha256": "41b3e6e43594d3f3cd417adf1527d7157f773150721614977a3fde5016684d42",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "kind": "ui",
+      "attempt": "firefox-1",
+      "artifact_id": 11479067263,
+      "artifact_sha256": "17ff82eaa1c949db9e5b730ae827c2c423170d7fea8bd6dc1f0a32efd308278b",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "kind": "ui",
+      "attempt": "firefox-2",
+      "artifact_id": 11479067263,
+      "artifact_sha256": "17ff82eaa1c949db9e5b730ae827c2c423170d7fea8bd6dc1f0a32efd308278b",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "kind": "ui",
+      "attempt": "firefox-3",
+      "artifact_id": 11479067263,
+      "artifact_sha256": "17ff82eaa1c949db9e5b730ae827c2c423170d7fea8bd6dc1f0a32efd308278b",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "hosted_totals": {
+    "maven_testng_executions": 106,
+    "passed": 106,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "python_check_executions": 14
+  },
+  "counting_note": "106 = API48 (16unit+15seed42+15seed43+1loan+1reset) + UI42scenarios + UI16framework (8perbrowser). Python seven distinct checks ran in each browser job. TestNG duplicate junitreports excluded. Unit XML overwritten by clean integration runs; retained job summaries are evidence for framework counts.",
+  "review_verdict": "Independent read-only reviewer approved six targeted important fixes; no remaining Important issue in those fixes. Declared original application capability limits remain."
+}

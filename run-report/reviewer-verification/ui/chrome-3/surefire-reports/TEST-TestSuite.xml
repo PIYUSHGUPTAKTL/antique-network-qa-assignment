@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="66.716" tests="7" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/ui-automation/target/test-classes:/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/ui-automation/target/classes:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-java/4.28.1/selenium-java-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-api/4.28.1/selenium-api-4.28.1.jar:/home/runner/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.28.1/selenium-chrome-driver-4.28.1.jar:/home/runner/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.28.1/selenium-chromium-driver-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-json/4.28.1/selenium-json-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.28.1/selenium-manager-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v130/4.28.1/selenium-devtools-v130-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v131/4.28.1/selenium-devtools-v131-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v132/4.28.1/selenium-devtools-v132-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.28.1/selenium-devtools-v85-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.28.1/selenium-edge-driver-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.28.1/selenium-firefox-driver-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-http/4.28.1/selenium-http-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.28.1/selenium-ie-driver-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.28.1/selenium-remote-driver-4.28.1.jar:/home/runner/.m2/repository/com/google/guava/guava/33.4.0-jre/guava-33.4.0-jre.jar:/home/runner/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/home/runner/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/runner/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/runner/.m2/repository/org/checkerframework/checker-qual/3.43.0/checker-qual-3.43.0.jar:/home/runner/.m2/repository/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar:/home/runner/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/home/runner/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.28.0-alpha/opentelemetry-semconv-1.28.0-alpha.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-api/1.46.0/opentelemetry-api-1.46.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-context/1.46.0/opentelemetry-context-1.46.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.46.0/opentelemetry-exporter-logging-1.46.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.46.0/opentelemetry-sdk-common-1.46.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.46.0/opentelemetry-sdk-extension-autoconfigure-spi-1.46.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.46.0/opentelemetry-sdk-extension-autoconfigure-1.46.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.46.0-alpha/opentelemetry-api-incubator-1.46.0-alpha.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.46.0/opentelemetry-sdk-trace-1.46.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.46.0/opentelemetry-sdk-1.46.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.46.0/opentelemetry-sdk-metrics-1.46.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.46.0/opentelemetry-sdk-logs-1.46.0.jar:/home/runner/.m2/repository/net/bytebuddy/byte-buddy/1.15.11/byte-buddy-1.15.11.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-os/4.28.1/selenium-os-4.28.1.jar:/home/runner/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.28.1/selenium-safari-driver-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-support/4.28.1/selenium-support-4.28.1.jar:/home/runner/.m2/repository/com/mysql/mysql-connector-j/9.1.0/mysql-connector-j-9.1.0.jar:/home/runner/.m2/repository/com/google/protobuf/protobuf-java/4.26.1/protobuf-java-4.26.1.jar:/home/runner/.m2/repository/org/testng/testng/7.10.2/testng-7.10.2.jar:/home/runner/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/home/runner/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/home/runner/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.18.2/jackson-databind-2.18.2.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.2/jackson-annotations-2.18.2.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.2/jackson-core-2.18.2.jar:/home/runner/.m2/repository/io/qameta/allure/allure-testng/2.29.1/allure-testng-2.29.1.jar:/home/runner/.m2/repository/io/qameta/allure/allure-java-commons/2.29.1/allure-java-commons-2.29.1.jar:/home/runner/.m2/repository/io/qameta/allure/allure-model/2.29.1/allure-model-2.29.1.jar:/home/runner/.m2/repository/io/qameta/allure/allure-test-filter/2.29.1/allure-test-filter-2.29.1.jar:/home/runner/.m2/repository/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Etc/UTC"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/temurin-17-jdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/ui-automation/target/surefire/surefirebooter-20261007112729558_3.jar /home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/ui-automation/target/surefire 2026-10-07T11-27-29_486-jvmRun1 surefire-20261007112729558_1tmp surefire_0-20261007112729558_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/ui-automation/target/test-classes:/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/ui-automation/target/classes:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-java/4.28.1/selenium-java-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-api/4.28.1/selenium-api-4.28.1.jar:/home/runner/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.28.1/selenium-chrome-driver-4.28.1.jar:/home/runner/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.28.1/selenium-chromium-driver-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-json/4.28.1/selenium-json-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.28.1/selenium-manager-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v130/4.28.1/selenium-devtools-v130-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v131/4.28.1/selenium-devtools-v131-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v132/4.28.1/selenium-devtools-v132-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.28.1/selenium-devtools-v85-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.28.1/selenium-edge-driver-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.28.1/selenium-firefox-driver-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-http/4.28.1/selenium-http-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.28.1/selenium-ie-driver-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.28.1/selenium-remote-driver-4.28.1.jar:/home/runner/.m2/repository/com/google/guava/guava/33.4.0-jre/guava-33.4.0-jre.jar:/home/runner/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/home/runner/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/runner/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/runner/.m2/repository/org/checkerframework/checker-qual/3.43.0/checker-qual-3.43.0.jar:/home/runner/.m2/repository/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar:/home/runner/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/home/runner/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.28.0-alpha/opentelemetry-semconv-1.28.0-alpha.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-api/1.46.0/opentelemetry-api-1.46.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-context/1.46.0/opentelemetry-context-1.46.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.46.0/opentelemetry-exporter-logging-1.46.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.46.0/opentelemetry-sdk-common-1.46.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.46.0/opentelemetry-sdk-extension-autoconfigure-spi-1.46.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.46.0/opentelemetry-sdk-extension-autoconfigure-1.46.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.46.0-alpha/opentelemetry-api-incubator-1.46.0-alpha.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.46.0/opentelemetry-sdk-trace-1.46.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.46.0/opentelemetry-sdk-1.46.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.46.0/opentelemetry-sdk-metrics-1.46.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.46.0/opentelemetry-sdk-logs-1.46.0.jar:/home/runner/.m2/repository/net/bytebuddy/byte-buddy/1.15.11/byte-buddy-1.15.11.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-os/4.28.1/selenium-os-4.28.1.jar:/home/runner/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.28.1/selenium-safari-driver-4.28.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-support/4.28.1/selenium-support-4.28.1.jar:/home/runner/.m2/repository/com/mysql/mysql-connector-j/9.1.0/mysql-connector-j-9.1.0.jar:/home/runner/.m2/repository/com/google/protobuf/protobuf-java/4.26.1/protobuf-java-4.26.1.jar:/home/runner/.m2/repository/org/testng/testng/7.10.2/testng-7.10.2.jar:/home/runner/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/home/runner/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/home/runner/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.18.2/jackson-databind-2.18.2.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.2/jackson-annotations-2.18.2.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.2/jackson-core-2.18.2.jar:/home/runner/.m2/repository/io/qameta/allure/allure-testng/2.29.1/allure-testng-2.29.1.jar:/home/runner/.m2/repository/io/qameta/allure/allure-java-commons/2.29.1/allure-java-commons-2.29.1.jar:/home/runner/.m2/repository/io/qameta/allure/allure-model/2.29.1/allure-model-2.29.1.jar:/home/runner/.m2/repository/io/qameta/allure/allure-test-filter/2.29.1/allure-test-filter-2.29.1.jar:/home/runner/.m2/repository/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar:"/>
+    <property name="allure.results.directory" value="target/allure-results"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/runner"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-08-18"/>
+    <property name="java.home" value="/usr/lib/jvm/temurin-17-jdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/ui-automation"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/ui-automation/target/surefire/surefirebooter-20261007112729558_3.jar"/>
+    <property name="seed" value="42"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.20.1+1"/>
+    <property name="user.name" value="runner"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.17.0-1022-azure"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-17.0.20.1+1"/>
+    <property name="localRepository" value="/home/runner/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="17.0.20.1"/>
+    <property name="user.dir" value="/home/runner/work/antique-network-qa-assignment/antique-network-qa-assignment/ui-automation"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="17.0.20.1+1"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="localizationAndCurrency" classname="qa.ui.ScenarioTests" time="12.773">
+    <system-out><![CDATA[{"event":"browser-created","browser":"chrome","version":"154.0.8037.97"}
+{"event":"browser-created","browser":"chrome","version":"154.0.8037.97"}
+{"event":"browser-created","browser":"chrome","version":"154.0.8037.97"}
+{"event":"browser-created","browser":"chrome","version":"154.0.8037.97"}
+]]></system-out>
+    <system-err><![CDATA[Oct 07, 2026 11:27:31 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 154
+Oct 07, 2026 11:27:31 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 154
+Oct 07, 2026 11:27:31 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 154.0.8037.97. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Oct 07, 2026 11:27:31 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 154.0.8037.97. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Oct 07, 2026 11:27:32 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 154
+Oct 07, 2026 11:27:32 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 154.0.8037.97. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Oct 07, 2026 11:27:32 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 154
+Oct 07, 2026 11:27:32 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 154.0.8037.97. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Oct 07, 2026 11:27:33 AM io.opentelemetry.api.GlobalOpenTelemetry maybeAutoConfigureAndSetGlobal
+INFO: AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
+]]></system-err>
+  </testcase>
+  <testcase name="couponAndVoucher" classname="qa.ui.ScenarioTests" time="15.279">
+    <system-out><![CDATA[{"event":"browser-created","browser":"chrome","version":"154.0.8037.97"}
+{"event":"browser-created","browser":"chrome","version":"154.0.8037.97"}
+]]></system-out>
+    <system-err><![CDATA[Oct 07, 2026 11:27:48 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 154
+Oct 07, 2026 11:27:48 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 154.0.8037.97. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Oct 07, 2026 11:27:49 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 154
+Oct 07, 2026 11:27:49 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 154.0.8037.97. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="orderLifecycleAndHistory" classname="qa.ui.ScenarioTests" time="13.405">
+    <system-out><![CDATA[{"event":"browser-created","browser":"chrome","version":"154.0.8037.97"}
+{"event":"browser-created","browser":"chrome","version":"154.0.8037.97"}
+]]></system-out>
+    <system-err><![CDATA[Oct 07, 2026 11:27:51 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 154
+Oct 07, 2026 11:27:51 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 154.0.8037.97. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Oct 07, 2026 11:27:52 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 154
+Oct 07, 2026 11:27:52 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 154.0.8037.97. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="paginatedSearchFilterSort" classname="qa.ui.ScenarioTests" time="0.224">
+    <system-out><![CDATA[{"event":"browser-created","browser":"chrome","version":"154.0.8037.97"}
+{"event":"browser-created","browser":"chrome","version":"154.0.8037.97"}
+]]></system-out>
+    <system-err><![CDATA[Oct 07, 2026 11:28:07 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 154
+Oct 07, 2026 11:28:07 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 154.0.8037.97. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Oct 07, 2026 11:28:08 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 154
+Oct 07, 2026 11:28:08 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 154.0.8037.97. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="requiredOptionsAndQuantity" classname="qa.ui.ScenarioTests" time="8.52">
+    <system-out><![CDATA[{"event":"browser-created","browser":"chrome","version":"154.0.8037.97"}
+{"event":"browser-created","browser":"chrome","version":"154.0.8037.97"}
+]]></system-out>
+    <system-err><![CDATA[Oct 07, 2026 11:28:11 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 154
+Oct 07, 2026 11:28:11 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 154.0.8037.97. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Oct 07, 2026 11:28:11 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 154
+Oct 07, 2026 11:28:11 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 154.0.8037.97. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="returnStatusAndIsolation" classname="qa.ui.ScenarioTests" time="2.82">
+    <system-out><![CDATA[{"event":"browser-created","browser":"chrome","version":"154.0.8037.97"}
+{"event":"browser-created","browser":"chrome","version":"154.0.8037.97"}
+]]></system-out>
+    <system-err><![CDATA[Oct 07, 2026 11:28:22 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 154
+Oct 07, 2026 11:28:22 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 154.0.8037.97. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Oct 07, 2026 11:28:22 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 154
+Oct 07, 2026 11:28:22 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 154.0.8037.97. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="stockAndCancellation" classname="qa.ui.ScenarioTests" time="11.997"/>
+</testsuite>
