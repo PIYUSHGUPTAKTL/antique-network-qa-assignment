@@ -1,0 +1,73 @@
+{
+  "workflow": {
+    "id": 37611113628,
+    "name": "API repeatability",
+    "head_sha": "66c3df1bc8123d3cf7078731e32065e00ff9bebd",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/PIYUSHGUPTAKTL/antique-network-qa-assignment/actions/runs/37611113628",
+    "created_at": "2026-10-07T11:00:09Z",
+    "updated_at": "2026-10-07T11:02:01Z"
+  },
+  "runtime": "GitHub hosted Ubuntu, Temurin JDK 17; pinned local ParaBank image with the reviewed patch overlay",
+  "runs": [
+    {
+      "run": "api-unit",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "evidence": "Job log, framework unit test step"
+    },
+    {
+      "run": "api-42",
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "run": "api-43",
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "run": "loans",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "run": "reset",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "totals": {
+    "tests": 45,
+    "passed": 45,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "artifact": {
+    "id": 11477677329,
+    "sha256": "97f0bd1da6de10ea6725c6d832897f2cf89a6fb5f686ee59879c7eb89fc5c974"
+  },
+  "original_failure": {
+    "run_url": "https://github.com/PIYUSHGUPTAKTL/antique-network-qa-assignment/actions/runs/37610253002",
+    "commit": "005509d6b4788795e16a82a0663cb1a0db81a5f6",
+    "failures_per_seed": 10,
+    "seeds": [
+      42,
+      43
+    ],
+    "cause": "Original CI started the unpatched official ParaBank demo; it reproduced documented ownership, invalid amount, concurrency and XML namespace defects."
+  },
+  "correction": "Build with docker-compose.yml plus docker-compose.patched.yml and API_BASE=http://127.0.0.1:8081/parabank. Original default Compose and all business assertions are retained. Workflow path filters and concurrency prevent duplicate superseded runs."
+}

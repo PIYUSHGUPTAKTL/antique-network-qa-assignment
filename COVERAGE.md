@@ -7,8 +7,12 @@ The final corrected run passed 67/67 project executions, 33/33 boundary checks a
 
 This is a reviewable assignment submission, with reproducible Java frameworks and actual evidence. It does not claim unsupported OpenCart behavior or passing banking assertions when ParaBank violates them.
 
+## Hosted API verification — 7 October 2026
+
+The corrected API workflow passed 45/45 executions on GitHub with Temurin JDK 17. Both integration seeds passed 15/15; unit tests passed 13/13; loans and reset each passed 1/1. Evidence: run-report/github-ci/results.json and https://github.com/PIYUSHGUPTAKTL/antique-network-qa-assignment/actions/runs/37611113628. The initial GitHub run failed because its startup used the original unpatched bank. Hosted UI results remain separate from this API result.
+
 ## Verification environment
-Windows 11, JDK 24 compiling with Java release 17, Maven 3.9.9, local Docker Linux containers. Application images/source are pinned in Compose and the store Dockerfile. Browser verification uses installed headless Chrome and Firefox with two parallel test methods and separate admin/customer sessions. GitHub Actions definitions are supplied but have not been run on GitHub. Docker Grid configuration is supplied; full Grid scenarios have not been executed locally.
+Windows 11, JDK 24 compiling with Java release 17, Maven 3.9.9, local Docker Linux containers. Application images/source are pinned in Compose and the store Dockerfile. Browser verification uses installed headless Chrome and Firefox with two parallel test methods and separate admin/customer sessions. GitHub Actions API verification has now passed as recorded above; the older baseline sections below describe historical local evidence. Docker Grid configuration is supplied; full Grid scenarios have not been executed locally.
 
 ## UI requirements
 | Scenario | Implemented verification | Limits |
@@ -42,7 +46,7 @@ Both final local integration attempts ran 15 tests: **5 passed, 10 failed, 0 ski
 Public reproduction is bounded to synthetic customers. The public service has no per-customer deletion; no global reset or loan administration was performed there. Local Compose teardown removes owned ephemeral bank data. Evidence JSON contains observed responses and balances without registration passwords.
 
 ## Execution evidence
-The five result-aggregation utility tests passed, including skip handling, missing runs, duplicate JUnit exports and Windows case-insensitive TestNG exports. The API Maven Wrapper also executed the 11 framework tests successfully. Class-file major version 61 confirms the Java 17 compilation target; a native JDK 17 run is delegated to the supplied CI workflow and has not been claimed locally.
+The five result-aggregation utility tests passed, including skip handling, missing runs, duplicate JUnit exports and Windows case-insensitive TestNG exports. The API Maven Wrapper also executed the 11 framework tests successfully. Class-file major version 61 confirms the Java 17 compilation target; the hosted API JDK 17 run is now verified above; no native local JDK 17 execution is claimed.
 
 Cart-navigation synchronization was changed before the revised matrix. The exact final-total label assertion was strengthened during verification; the subsequent Firefox repeats and the subtotal-only framework regression check cover that stricter oracle. Earlier revised Chrome attempts already exercised discounted totals that differ from subtotal. Firefox then exposed input interaction during a coupon accordion animation; an expanded-state wait was added during the matrix. Failures remain in the measured rate, and a focused follow-up validates the final coupon flow. This does not justify discarding observed results.
 

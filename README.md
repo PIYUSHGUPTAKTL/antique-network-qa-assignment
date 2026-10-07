@@ -8,11 +8,15 @@ The corrected local run on 7 October 2026 passed **67/67 Maven/TestNG executions
 - `ui-automation/`: Java Selenium/TestNG framework, Docker Compose, FLAKINESS.md and PYRAMID.md.
 - `api-tests/`: layered Java Rest Assured framework, TEST_PLAN.md and DEFECT_REPORT.md.
 - `DECISIONS.md` and `COVERAGE.md`: trade-offs, AI use and scope.
-- `.github/workflows/`: supplied UI/API CI workflows; hosted execution is not claimed.
+- `.github/workflows/`: UI/API CI workflows; hosted API success is recorded below, and UI status is separate.
 
 **The default bank Compose file runs the original official demo and deliberately exposes its defects.** To reproduce the green corrected run, use `api-tests/patch/README.md` and its additional Compose overlay. Public ParaBank was not modified. Original defect evidence remains under `evidence/`; the optional application patch supplements the assignment's defect analysis.
 
 This essential submission includes source, wrappers, configuration, documentation, sanitized defect evidence, final raw Surefire XML and result summaries. Build outputs, credentials, caches, duplicate Allure assets and development diagnostic archives are excluded. The full diagnostic bundle referenced in the report is retained in the candidate's local fixed submission ZIP; those diagnostic paths are not all included here. Allure attachments are generated when the suites run.
+
+## Hosted API verification
+
+The corrected [API repeatability run](https://github.com/PIYUSHGUPTAKTL/antique-network-qa-assignment/actions/runs/37611113628) passed **45/45 executions** on GitHub with JDK 17: 13 unit tests, both 15-case API seeds, one loan scenario and one reset scenario; no failures, errors or skips. Exact hosted results and raw XML are in `run-report/github-ci/`. The first workflow used the unpatched demo and failed 10 cases per seed; its historical results remain visible. API CI now builds the optional local patch overlay while retaining every business assertion. Hosted UI verification is a separate workflow and is not implied by this API result.
 
 ## Framework setup and commands
 
