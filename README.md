@@ -4,7 +4,7 @@
 
 The corrected local run on 7 October 2026 passed **67/67 Maven/TestNG executions**, **33/33 additional boundary regressions**, and **5/5 report utility checks**, with no failures, errors or skips. These are executions across both browsers and two API seeds, not 67 unique test designs.
 
-- `run-report/Full_Project_Run_Report.html` (or PDF): original failure analysis, fixes, complete final results and limitations.
+- [Full execution report](run-report/Full_Project_Run_Report.html) (or [PDF](run-report/Full_Project_Run_Report.pdf)): original failure analysis, fixes, complete final results and limitations.
 - `ui-automation/`: Java Selenium/TestNG framework, Docker Compose, FLAKINESS.md and PYRAMID.md.
 - `api-tests/`: layered Java Rest Assured framework, TEST_PLAN.md and DEFECT_REPORT.md.
 - `DECISIONS.md` and `COVERAGE.md`: trade-offs, AI use and scope.
@@ -98,4 +98,4 @@ After saving reports:
 docker compose -f ui-automation/docker-compose.yml down -v
 docker compose -f api-tests/docker-compose.yml down -v
 ```
-These commands destroy only this assignment's owned Compose data. Upload the repository contents (including .github) to your GitHub repository, grant access to the panel, and reply to the assignment email with the repository link. Do not upload .env, local database volumes or credentials. DECISIONS.md discloses AI assistance and compromises. Repository publication/email are not performed here; the assignment PDF does not supply the repository or panel email.
+These commands destroy only this assignment's owned Compose data. Upload the repository contents (including .github) to your GitHub repository, grant access to the panel, and reply to the assignment email with the repository link. Do not upload .env, local database volumes or credentials. DECISIONS.md discloses AI assistance and compromises. The project is published at https://github.com/PIYUSHGUPTAKTL/antique-network-qa-assignment. Panel invitation and the assignment email still require the company reviewer's destination; they are not yet completed.
