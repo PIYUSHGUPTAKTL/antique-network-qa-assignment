@@ -1,5 +1,13 @@
 name: UI browser reliability
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    paths: ['ui-automation/**', 'scripts/**', '.github/workflows/ui.yml']
+  pull_request:
+    paths: ['ui-automation/**', 'scripts/**', '.github/workflows/ui.yml']
+  workflow_dispatch:
+concurrency:
+  group: ui-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   browsers:
     runs-on: ubuntu-latest
