@@ -1,6 +1,6 @@
 # Coverage and verified limits
 
-## Latest patched local rerun â€” 7 October 2026
+## Latest patched local rerun - 7 October 2026
 
 The final corrected run passed 67/67 project executions, 33/33 boundary checks and five report utility checks. Read run-report/Full_Project_Run_Report.html for the final matrix. Firefox used one method thread; Chrome used two. The sections below describe the original baseline verification and remain historical evidence, not the latest patched results.
 
@@ -51,4 +51,4 @@ Final browser verification ran **42 scenario executions across six attempts (Chr
 Essential original raw Surefire XML and result summaries are under `evidence/release/`; duplicate HTML/Allure assets and development diagnostic samples are retained locally rather than in this trimmed repository. `verification.json` records per-run counts/failures and execution boundaries; `ui-summary.json` records the measured rate. TestNG duplicate JUnit exports are excluded. Development screenshot/DOM diagnostics are excluded from release rates and retained locally outside this essential repository.
 
 ## Submission boundary
-Source, Maven Wrapper, Compose, JSON test data, docs, CI workflows and captured evidence are included. Publishing to GitHub, granting panel access and replying by email require the candidate's repository/account and destination; these external actions have not been performed. Read DECISIONS.md for AI assistance disclosure.
+Source, Maven Wrapper, Compose, JSON test data, docs, CI workflows and captured evidence are included. The essential source and evidence are published under PIYUSHGUPTAKTL/antique-network-qa-assignment. Panel access and the assignment email are pending the company reviewer's email or GitHub username. Read DECISIONS.md for AI assistance disclosure.
