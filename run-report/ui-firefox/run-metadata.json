@@ -1,0 +1,11 @@
+{
+  "label": "ui-firefox",
+  "flags": [
+    "-Pintegration",
+    "-Dthreads=1"
+  ],
+  "module": "ui-automation",
+  "started": "2026-10-07T15:47:56.9199220+05:30",
+  "exit_code": 0,
+  "finished": "2026-10-07T15:51:27.9678653+05:30"
+}

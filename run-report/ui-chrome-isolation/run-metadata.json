@@ -1,0 +1,10 @@
+{
+  "label": "ui-chrome-isolation",
+  "flags": [
+    "-Dgroups=browser"
+  ],
+  "module": "ui-automation",
+  "started": "2026-10-07T15:44:51.0419672+05:30",
+  "exit_code": 0,
+  "finished": "2026-10-07T15:45:12.8033933+05:30"
+}

@@ -1,0 +1,12 @@
+{
+  "tests": 42,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "passed": 41,
+  "pass_rate": 97.62,
+  "first_attempt_rate": 97.62,
+  "runs": 6,
+  "missing_runs": 0,
+  "target_met": true
+}

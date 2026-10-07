@@ -1,0 +1,53 @@
+name: antique-qa-ui
+services:
+  redis:
+    image: redis:7.4@sha256:4fa24486b8bcca8eec45ee0eb166edc674795e53a2b53d1a9ef263eecebaac85
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+  db:
+    image: mariadb:10.11@sha256:7db29378d4fdab73f8123bbc2b48905c90d1a4b00cf848b028f1e81e623257f2
+    environment:
+      MARIADB_DATABASE: opencart
+      MARIADB_USER: opencart
+      MARIADB_PASSWORD: ${DB_PASSWORD:?Run configure script}
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:?Run configure script}
+    ports: ["3307:3306"]
+    volumes: ["db-data:/var/lib/mysql"]
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 60
+  store:
+    build: ./docker
+    environment:
+      DB_PASSWORD: ${DB_PASSWORD}
+      UI_ADMIN_USER: ${UI_ADMIN_USER}
+      UI_ADMIN_PASSWORD: ${UI_ADMIN_PASSWORD}
+      STORE_URL: ${STORE_URL:-http://localhost:8080/}
+    ports: ["8080:80"]
+    depends_on:
+      db: {condition: service_healthy}
+      redis: {condition: service_healthy}
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost/index.php >/dev/null"]
+      interval: 5s
+      timeout: 3s
+      retries: 60
+  chrome:
+    image: selenium/standalone-chrome:4.28.1-20250202
+    profiles: ["grid"]
+    shm_size: 2gb
+    extra_hosts: ["host.docker.internal:host-gateway"]
+    ports: ["4444:4444"]
+  firefox:
+    image: selenium/standalone-firefox:4.28.1-20250202
+    profiles: ["grid"]
+    shm_size: 2gb
+    extra_hosts: ["host.docker.internal:host-gateway"]
+    ports: ["4445:4444"]
+volumes:
+  db-data:

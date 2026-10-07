@@ -1,0 +1,11 @@
+{
+  "exit_code": 0,
+  "flags": [
+    "-Pintegration",
+    "-Dseed=42"
+  ],
+  "module": "api-tests",
+  "label": "api-seed-42",
+  "finished": "2026-10-07T16:00:09.0836919+05:30",
+  "started": "2026-10-07T15:59:50.1008948+05:30"
+}

@@ -1,0 +1,247 @@
+{
+  "verified_date": "2026-10-07",
+  "environment": {
+    "host": "Windows 11",
+    "jdk": "24, compiler release 17",
+    "maven": "3.9.9",
+    "browser_mode": "headless local",
+    "parallel_ui_methods": 2,
+    "automatic_retries": 0,
+    "ci_executed": false,
+    "grid_executed": false
+  },
+  "ui_summary": {
+    "tests": 42,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 41,
+    "pass_rate": 97.62,
+    "first_attempt_rate": 97.62,
+    "runs": 6,
+    "missing_runs": 0,
+    "target_met": true
+  },
+  "ui_unit": {
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "runs": [
+    {
+      "run": "evidence/release/api/loans",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failure_details": []
+    },
+    {
+      "run": "evidence/release/api/reset",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failure_details": []
+    },
+    {
+      "run": "evidence/release/api/seed-42",
+      "tests": 15,
+      "failures": 10,
+      "errors": 0,
+      "skipped": 0,
+      "failure_details": [
+        {
+          "class": "qa.api.ContractTests",
+          "case": "deployedXmlSchema",
+          "message": "Deployed contract validation failed: cvc-elt.1.a: Cannot find the declaration of element 'account'."
+        },
+        {
+          "class": "qa.api.BankTests",
+          "case": "negativeWithdrawalCannotIncreaseBalance",
+          "message": "The following asserts failed:\n Negative withdrawal accepted expected [true] but found [false],\n Negative withdrawal credited money expected [0] but found [1]"
+        },
+        {
+          "class": "qa.api.BankTests",
+          "case": "crossCustomerTransfer",
+          "message": "The following asserts failed:\n Unauthorized debit accepted: 200 expected [true] but found [false],\n Victim debited expected [0] but found [-1],\n Attacker credited expected [0] but found [1]"
+        },
+        {
+          "class": "qa.api.BankTests",
+          "case": "crossCustomerTransactionRead",
+          "message": "Another customer's transactions exposed: 200 expected [true] but found [false]"
+        },
+        {
+          "class": "qa.api.BankTests",
+          "case": "negativeDepositCannotReduceBalance",
+          "message": "The following asserts failed:\n Negative deposit accepted expected [true] but found [false],\n Negative deposit reduced balance expected [0] but found [-1]"
+        },
+        {
+          "class": "qa.api.BankTests",
+          "case": "concurrentWithdrawals",
+          "message": "The following asserts failed:\n Lost update: accepted debits do not match balance expected [0] but found [1],\n Final balance does not reconcile with withdrawal ledger and opening baseline expected [0] but found [1]"
+        },
+        {
+          "class": "qa.api.BankTests",
+          "case": "invalidTransfers[insufficient, 999999.00](1)",
+          "message": "The following asserts failed:\n Invalid movement must be rejected: 200 expected [true] but found [false],\n Error response must have the documented plain-text error shape expected [true] but found [false],\n Rejected movement changed balance expected [0] but found [-1],\n Rejected movement changed source ledger: lists don't have the same size expected [1] but found [2],\n Rejected movement changed destination expected [0] but found [1],\n Rejected movement changed destination ledger: lists don't have the same size expected [1] but found [2]"
+        },
+        {
+          "class": "qa.api.BankTests",
+          "case": "invalidTransfers[negative, -1.00](2)",
+          "message": "The following asserts failed:\n Invalid movement must be rejected: 200 expected [true] but found [false],\n Error response must have the documented plain-text error shape expected [true] but found [false],\n Rejected movement changed balance expected [0] but found [1],\n Rejected movement changed source ledger: lists don't have the same size expected [1] but found [2],\n Rejected movement changed destination expected [0] but found [-1],\n Rejected movement changed destination ledger: lists don't have the same size expected [1] but found [2]"
+        },
+        {
+          "class": "qa.api.BankTests",
+          "case": "invalidTransfers[zero, 0](3)",
+          "message": "The following asserts failed:\n Invalid movement must be rejected: 200 expected [true] but found [false],\n Error response must have the documented plain-text error shape expected [true] but found [false],\n Rejected movement changed source ledger: lists don't have the same size expected [1] but found [2],\n Rejected movement changed destination ledger: lists don't have the same size expected [1] but found [2]"
+        },
+        {
+          "class": "qa.api.BankTests",
+          "case": "invalidTransfers[nonnumeric, abc](4)",
+          "message": "The following asserts failed:\n Error body missing expected [false] but found [true],\n Error response must have the documented plain-text error shape expected [true] but found [false]"
+        }
+      ]
+    },
+    {
+      "run": "evidence/release/api/seed-43",
+      "tests": 15,
+      "failures": 10,
+      "errors": 0,
+      "skipped": 0,
+      "failure_details": [
+        {
+          "class": "qa.api.BankTests",
+          "case": "negativeDepositCannotReduceBalance",
+          "message": "The following asserts failed:\n Negative deposit accepted expected [true] but found [false],\n Negative deposit reduced balance expected [0] but found [-1]"
+        },
+        {
+          "class": "qa.api.BankTests",
+          "case": "invalidTransfers[insufficient, 999999.00](1)",
+          "message": "The following asserts failed:\n Invalid movement must be rejected: 200 expected [true] but found [false],\n Error response must have the documented plain-text error shape expected [true] but found [false],\n Rejected movement changed balance expected [0] but found [-1],\n Rejected movement changed source ledger: lists don't have the same size expected [1] but found [2],\n Rejected movement changed destination expected [0] but found [1],\n Rejected movement changed destination ledger: lists don't have the same size expected [1] but found [2]"
+        },
+        {
+          "class": "qa.api.BankTests",
+          "case": "invalidTransfers[negative, -1.00](2)",
+          "message": "The following asserts failed:\n Invalid movement must be rejected: 200 expected [true] but found [false],\n Error response must have the documented plain-text error shape expected [true] but found [false],\n Rejected movement changed balance expected [0] but found [1],\n Rejected movement changed source ledger: lists don't have the same size expected [1] but found [2],\n Rejected movement changed destination expected [0] but found [-1],\n Rejected movement changed destination ledger: lists don't have the same size expected [1] but found [2]"
+        },
+        {
+          "class": "qa.api.BankTests",
+          "case": "invalidTransfers[zero, 0](3)",
+          "message": "The following asserts failed:\n Invalid movement must be rejected: 200 expected [true] but found [false],\n Error response must have the documented plain-text error shape expected [true] but found [false],\n Rejected movement changed source ledger: lists don't have the same size expected [1] but found [2],\n Rejected movement changed destination ledger: lists don't have the same size expected [1] but found [2]"
+        },
+        {
+          "class": "qa.api.BankTests",
+          "case": "invalidTransfers[nonnumeric, abc](4)",
+          "message": "The following asserts failed:\n Error body missing expected [false] but found [true],\n Error response must have the documented plain-text error shape expected [true] but found [false]"
+        },
+        {
+          "class": "qa.api.BankTests",
+          "case": "concurrentWithdrawals",
+          "message": "The following asserts failed:\n Lost update: accepted debits do not match balance expected [0] but found [1],\n Final balance does not reconcile with withdrawal ledger and opening baseline expected [0] but found [1]"
+        },
+        {
+          "class": "qa.api.BankTests",
+          "case": "crossCustomerTransfer",
+          "message": "The following asserts failed:\n Unauthorized debit accepted: 200 expected [true] but found [false],\n Victim debited expected [0] but found [-1],\n Attacker credited expected [0] but found [1]"
+        },
+        {
+          "class": "qa.api.BankTests",
+          "case": "negativeWithdrawalCannotIncreaseBalance",
+          "message": "The following asserts failed:\n Negative withdrawal accepted expected [true] but found [false],\n Negative withdrawal credited money expected [0] but found [1]"
+        },
+        {
+          "class": "qa.api.BankTests",
+          "case": "crossCustomerTransactionRead",
+          "message": "Another customer's transactions exposed: 200 expected [true] but found [false]"
+        },
+        {
+          "class": "qa.api.ContractTests",
+          "case": "deployedXmlSchema",
+          "message": "Deployed contract validation failed: cvc-elt.1.a: Cannot find the declaration of element 'account'."
+        }
+      ]
+    },
+    {
+      "run": "evidence/release/api/unit",
+      "tests": 11,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failure_details": []
+    },
+    {
+      "run": "evidence/release/focused/chrome-coupon",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failure_details": []
+    },
+    {
+      "run": "evidence/release/focused/firefox-coupon",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failure_details": []
+    },
+    {
+      "run": "evidence/release/ui/chrome-1",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failure_details": []
+    },
+    {
+      "run": "evidence/release/ui/chrome-2",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failure_details": []
+    },
+    {
+      "run": "evidence/release/ui/chrome-3",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failure_details": []
+    },
+    {
+      "run": "evidence/release/ui/firefox-1",
+      "tests": 7,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "failure_details": [
+        {
+          "class": "qa.ui.ScenarioTests",
+          "case": "couponAndVoucher",
+          "message": "Element <input id=\"input-coupon\" class=\"form-control\" name=\"coupon\" type=\"text\"> could not be scrolled into view\nBuild info: version: '4.28.1', revision: '73f5ad48a2'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '24'\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCommand: [ae9605ad-f297-4655-aa56-a1ec6a2265f3, clearElement {id=5a91b009-4bbc-4983-ac74-be4cbe1a393c}]\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 143.0.3, moz:accessibilityChecks: false, moz:buildID: 20250929153833, moz:geckodriverVersion: 0.37.1, moz:headless: true, moz:platformVersion: 10.0, moz:processID: 37936, moz:profile: C:\\Users\\RYZEN\\AppData\\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}\nElement: [[FirefoxDriver: firefox on windows (ae9605ad-f297-4655-aa56-a1ec6a2265f3)] -> css selector: #input-coupon]\nSession ID: ae9605ad-f297-4655-aa56-a1ec6a2265f3"
+        }
+      ]
+    },
+    {
+      "run": "evidence/release/ui/firefox-2",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failure_details": []
+    },
+    {
+      "run": "evidence/release/ui/firefox-3",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failure_details": []
+    }
+  ],
+  "public_defects": "api-public-reproductions.json",
+  "local_defects": "api-local-reproductions.json"
+}

@@ -1,0 +1,22 @@
+name: antique-qa-api
+services:
+  bank:
+    image: parasoft/parabank@sha256:cebe472d86a10be23ce448f0f419f3c939a818112ab78cd57fc09e185f35d1c0
+    ports: ["8081:8080"]
+    healthcheck:
+      test: ["CMD", "bash", "-c", "echo > /dev/tcp/localhost/8080"]
+      interval: 5s
+      timeout: 3s
+      retries: 60
+  bank-init:
+    image: curlimages/curl:8.12.1@sha256:94e9e444bcba979c2ea12e27ae39bee4cd10bc7041a472c4727a558e213744e6
+    depends_on:
+      bank: {condition: service_healthy}
+    entrypoint: ["sh", "-c"]
+    command: ["curl -fsS --max-time 15 --retry 30 --retry-all-errors --retry-delay 2 -X POST http://bank:8080/parabank/services/bank/initializeDB && touch /tmp/ready && exec tail -f /dev/null"]
+    healthcheck:
+      test: ["CMD", "test", "-f", "/tmp/ready"]
+      interval: 2s
+      timeout: 2s
+      retries: 90
+    restart: "no"

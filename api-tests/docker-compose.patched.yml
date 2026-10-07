@@ -1,0 +1,6 @@
+# Opt-in overlay. Default docker-compose.yml continues to use the original official demo.
+services:
+  bank:
+    image: antique-qa-bank:fixed
+    build: {context: ./patch}
+    ports: !override ["127.0.0.1:8081:8080"]

@@ -1,0 +1,12 @@
+{
+  "basePrice": "100.00",
+  "fixedAddition": "20.00",
+  "reductionPercent": "10",
+  "couponPercent": "10",
+  "couponMinimum": "150.00",
+  "couponEligiblePrice": "100.03",
+  "couponIneligiblePrice": "50.07",
+  "voucherValue": "25.00",
+  "exchangeRate": "1.23456",
+  "quantity": 2
+}

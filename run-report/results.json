@@ -1,0 +1,779 @@
+{
+  "generated": "2026-10-07T16:06:38.129655+05:30",
+  "commit": "7672c3c46d849c8190121e92771217f91a2c0eaa",
+  "runs": [
+    {
+      "run": "ui-unit",
+      "label": "ui-unit",
+      "flags": [],
+      "module": "ui-automation",
+      "started": "2026-10-07T15:44:37.3095813+05:30",
+      "exit_code": 0,
+      "finished": "2026-10-07T15:44:50.4193833+05:30",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 6,
+      "cases": [
+        {
+          "name": "envOverrides",
+          "class_name": "qa.CoreTest",
+          "seconds": 0.193,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "missingSecret",
+          "class_name": "qa.CoreTest",
+          "seconds": 0.004,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "rounding",
+          "class_name": "qa.CoreTest",
+          "seconds": 0.01,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "reverseOrderAndContinue",
+          "class_name": "qa.CleanupTest",
+          "seconds": 0.201,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "finalTotalWinsOverSubtotal",
+          "class_name": "qa.ui.CartTotalTest",
+          "seconds": 0.03,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "subtotalCannotStandInForMissingTotal",
+          "class_name": "qa.ui.CartTotalTest",
+          "seconds": 1.035,
+          "status": "PASS",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "run": "ui-chrome-isolation",
+      "label": "ui-chrome-isolation",
+      "flags": [
+        "-Dgroups=browser"
+      ],
+      "module": "ui-automation",
+      "started": "2026-10-07T15:44:51.0419672+05:30",
+      "exit_code": 0,
+      "finished": "2026-10-07T15:45:12.8033933+05:30",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 1,
+      "cases": [
+        {
+          "name": "separateCookies",
+          "class_name": "qa.ui.SessionTest",
+          "seconds": 10.841,
+          "status": "PASS",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "run": "ui-chrome",
+      "label": "ui-chrome",
+      "flags": [
+        "-Pintegration"
+      ],
+      "module": "ui-automation",
+      "started": "2026-10-07T15:45:13.3705223+05:30",
+      "exit_code": 0,
+      "finished": "2026-10-07T15:47:27.5684668+05:30",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 7,
+      "cases": [
+        {
+          "name": "localizationAndCurrency",
+          "class_name": "qa.ui.ScenarioTests",
+          "seconds": 23.496,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "couponAndVoucher",
+          "class_name": "qa.ui.ScenarioTests",
+          "seconds": 27.309,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "orderLifecycleAndHistory",
+          "class_name": "qa.ui.ScenarioTests",
+          "seconds": 22.25,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "paginatedSearchFilterSort",
+          "class_name": "qa.ui.ScenarioTests",
+          "seconds": 5.54,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "requiredOptionsAndQuantity",
+          "class_name": "qa.ui.ScenarioTests",
+          "seconds": 1.075,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "returnStatusAndIsolation",
+          "class_name": "qa.ui.ScenarioTests",
+          "seconds": 21.04,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "stockAndCancellation",
+          "class_name": "qa.ui.ScenarioTests",
+          "seconds": 24.115,
+          "status": "PASS",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "run": "ui-firefox-isolation",
+      "label": "ui-firefox-isolation",
+      "flags": [
+        "-Dgroups=browser"
+      ],
+      "module": "ui-automation",
+      "started": "2026-10-07T15:47:28.3514478+05:30",
+      "exit_code": 0,
+      "finished": "2026-10-07T15:47:56.4411017+05:30",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 1,
+      "cases": [
+        {
+          "name": "separateCookies",
+          "class_name": "qa.ui.SessionTest",
+          "seconds": 16.587,
+          "status": "PASS",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "run": "ui-firefox",
+      "label": "ui-firefox",
+      "flags": [
+        "-Pintegration",
+        "-Dthreads=1"
+      ],
+      "module": "ui-automation",
+      "started": "2026-10-07T15:47:56.9199220+05:30",
+      "exit_code": 0,
+      "finished": "2026-10-07T15:51:27.9678653+05:30",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 7,
+      "cases": [
+        {
+          "name": "couponAndVoucher",
+          "class_name": "qa.ui.ScenarioTests",
+          "seconds": 14.628,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "localizationAndCurrency",
+          "class_name": "qa.ui.ScenarioTests",
+          "seconds": 16.456,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "orderLifecycleAndHistory",
+          "class_name": "qa.ui.ScenarioTests",
+          "seconds": 16.863,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "paginatedSearchFilterSort",
+          "class_name": "qa.ui.ScenarioTests",
+          "seconds": 18.75,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "requiredOptionsAndQuantity",
+          "class_name": "qa.ui.ScenarioTests",
+          "seconds": 12.676,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "returnStatusAndIsolation",
+          "class_name": "qa.ui.ScenarioTests",
+          "seconds": 11.812,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "stockAndCancellation",
+          "class_name": "qa.ui.ScenarioTests",
+          "seconds": 16.461,
+          "status": "PASS",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "run": "api-unit",
+      "exit_code": 0,
+      "flags": [],
+      "module": "api-tests",
+      "label": "api-unit",
+      "finished": "2026-10-07T15:59:49.4246646+05:30",
+      "started": "2026-10-07T15:59:38.0439065+05:30",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 13,
+      "cases": [
+        {
+          "name": "detectsMissingFields",
+          "class_name": "qa.ParityTest",
+          "seconds": 0.422,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "singletonCollectionHasParity",
+          "class_name": "qa.ParityTest",
+          "seconds": 0.01,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "decimalParity",
+          "class_name": "qa.ParityTest",
+          "seconds": 0.006,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "reorderedRecordsHaveParity",
+          "class_name": "qa.ParityTest",
+          "seconds": 0.007,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "qualifiedFieldsHaveDecimalParity",
+          "class_name": "qa.ParityTest",
+          "seconds": 0.007,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "externalEntityRejected",
+          "class_name": "qa.ParityTest",
+          "seconds": 0.014,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "qualifiedEmptyCollectionHasParity",
+          "class_name": "qa.ParityTest",
+          "seconds": 0.008,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "rounding",
+          "class_name": "qa.CoreTest",
+          "seconds": 0.006,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "missingSecret",
+          "class_name": "qa.CoreTest",
+          "seconds": 0.007,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "envOverrides",
+          "class_name": "qa.CoreTest",
+          "seconds": 0.007,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "serverErrorIsNotReset",
+          "class_name": "qa.ResetClassificationTest",
+          "seconds": 1.855,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "unknownType",
+          "class_name": "qa.LedgerTest",
+          "seconds": 0.008,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "creditsAndDebits",
+          "class_name": "qa.LedgerTest",
+          "seconds": 0.006,
+          "status": "PASS",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "run": "api-seed-42",
+      "exit_code": 0,
+      "flags": [
+        "-Pintegration",
+        "-Dseed=42"
+      ],
+      "module": "api-tests",
+      "label": "api-seed-42",
+      "finished": "2026-10-07T16:00:09.0836919+05:30",
+      "started": "2026-10-07T15:59:50.1008948+05:30",
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 15,
+      "cases": [
+        {
+          "name": "deployedXmlSchema",
+          "class_name": "qa.api.ContractTests",
+          "seconds": 0.933,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "jsonXmlParity",
+          "class_name": "qa.api.ContractTests",
+          "seconds": 0.241,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "movementAndLedger",
+          "class_name": "qa.api.BankTests",
+          "seconds": 1.235,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "negativeWithdrawalCannotIncreaseBalance",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.088,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "crossCustomerTransfer",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.328,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "crossCustomerTransactionRead",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.18,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "negativeDepositCannotReduceBalance",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.093,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "transactionSearch",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.143,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "concurrentWithdrawals",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.281,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "invalidTransfers[insufficient, 999999.00](1)",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.391,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "invalidTransfers[negative, -1.00](2)",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.369,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "invalidTransfers[zero, 0](3)",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.339,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "invalidTransfers[nonnumeric, abc](4)",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.285,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "invalidTransfers[missing-target, 1.00](5)",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.134,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "registrationAndIdentity",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.069,
+          "status": "PASS",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "run": "api-seed-43",
+      "exit_code": 0,
+      "flags": [
+        "-Pintegration",
+        "-Dseed=43"
+      ],
+      "module": "api-tests",
+      "label": "api-seed-43",
+      "finished": "2026-10-07T16:00:28.9590715+05:30",
+      "started": "2026-10-07T16:00:10.0189705+05:30",
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 15,
+      "cases": [
+        {
+          "name": "transactionSearch",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.272,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "movementAndLedger",
+          "class_name": "qa.api.BankTests",
+          "seconds": 1.398,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "negativeDepositCannotReduceBalance",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.102,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "invalidTransfers[insufficient, 999999.00](1)",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.381,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "invalidTransfers[negative, -1.00](2)",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.295,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "invalidTransfers[zero, 0](3)",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.334,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "invalidTransfers[nonnumeric, abc](4)",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.278,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "invalidTransfers[missing-target, 1.00](5)",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.132,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "concurrentWithdrawals",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.354,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "crossCustomerTransfer",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.293,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "negativeWithdrawalCannotIncreaseBalance",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.079,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "registrationAndIdentity",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.069,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "crossCustomerTransactionRead",
+          "class_name": "qa.api.BankTests",
+          "seconds": 0.128,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "deployedXmlSchema",
+          "class_name": "qa.api.ContractTests",
+          "seconds": 0.694,
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "name": "jsonXmlParity",
+          "class_name": "qa.api.ContractTests",
+          "seconds": 0.152,
+          "status": "PASS",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "run": "api-loans",
+      "exit_code": 0,
+      "flags": [
+        "-Dgroups=loans"
+      ],
+      "module": "api-tests",
+      "label": "api-loans",
+      "finished": "2026-10-07T16:00:47.5394787+05:30",
+      "started": "2026-10-07T16:00:30.0814654+05:30",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 1,
+      "cases": [
+        {
+          "name": "loanRules",
+          "class_name": "qa.api.LocalTests",
+          "seconds": 6.667,
+          "status": "PASS",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "run": "api-reset",
+      "exit_code": 0,
+      "flags": [
+        "-Dgroups=reset"
+      ],
+      "module": "api-tests",
+      "label": "api-reset",
+      "finished": "2026-10-07T16:01:02.4017486+05:30",
+      "started": "2026-10-07T16:00:48.0636146+05:30",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 1,
+      "cases": [
+        {
+          "name": "midRunResetClassified",
+          "class_name": "qa.api.LocalTests",
+          "seconds": 4.66,
+          "status": "PASS",
+          "message": ""
+        }
+      ]
+    }
+  ],
+  "summary_utility_exit": 0,
+  "defect_utility_exit": 0,
+  "defects": {
+    "base": "http://127.0.0.1:8081/parabank",
+    "scope": "Owned synthetic customers; no public administration, reset or concurrency",
+    "findings": [
+      {
+        "id": "API-01",
+        "operation": {
+          "method": "GET",
+          "path": "accounts/13677/transactions"
+        },
+        "owner_customer": 12545,
+        "requester_customer": 12434,
+        "response": {
+          "status": 403,
+          "body": "Account access denied",
+          "content_type": "text/plain;charset=UTF-8"
+        },
+        "observed": false
+      },
+      {
+        "id": "API-02",
+        "operation": {
+          "method": "POST",
+          "path": "transfer",
+          "parameters": {
+            "fromAccountId": 13677,
+            "toAccountId": 13566,
+            "amount": "1.00"
+          }
+        },
+        "before": {
+          "victim": "525.5",
+          "requester": "515.5"
+        },
+        "after": {
+          "victim": "525.5",
+          "requester": "515.5"
+        },
+        "response": {
+          "status": 403,
+          "body": "Account access denied",
+          "content_type": "text/plain;charset=UTF-8"
+        },
+        "observed": false
+      },
+      {
+        "id": "API-03",
+        "operation": {
+          "method": "POST",
+          "path": "deposit",
+          "parameters": {
+            "accountId": 13788,
+            "amount": "-10.00"
+          }
+        },
+        "before": "515.5",
+        "after": "515.5",
+        "response": {
+          "status": 400,
+          "body": "Amount must be positive with at most two decimal places",
+          "content_type": "text/plain;charset=UTF-8"
+        },
+        "observed": false
+      },
+      {
+        "id": "API-04",
+        "operation": {
+          "method": "POST",
+          "path": "withdraw",
+          "parameters": {
+            "accountId": 13899,
+            "amount": "-10.00"
+          }
+        },
+        "before": "515.5",
+        "after": "515.5",
+        "response": {
+          "status": 400,
+          "body": "Amount must be positive with at most two decimal places",
+          "content_type": "text/plain;charset=UTF-8"
+        },
+        "observed": false
+      },
+      {
+        "id": "API-05",
+        "operation": {
+          "method": "POST",
+          "path": "transfer",
+          "parameters": {
+            "fromAccountId": 14010,
+            "toAccountId": 14121,
+            "amount": "416.50"
+          }
+        },
+        "before": "415.5",
+        "after": "415.5",
+        "response": {
+          "status": 400,
+          "body": "Invalid banking request",
+          "content_type": "text/plain"
+        },
+        "observed": false
+      },
+      {
+        "id": "API-06",
+        "operation": {
+          "method": "GET",
+          "path": "accounts/14010",
+          "accept": "application/xml"
+        },
+        "declared_namespaces": [
+          "http://service.parabank.parasoft.com/"
+        ],
+        "actual_root": "{http://service.parabank.parasoft.com/}account",
+        "response": {
+          "status": 200,
+          "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><ns2:account xmlns:ns2=\"http://service.parabank.parasoft.com/\"><id>14010</id><customerId>12878</customerId><type>CHECKING</type><balance>415.50</balance></ns2:account>",
+          "content_type": "application/xml"
+        },
+        "observed": false
+      }
+    ]
+  }
+}

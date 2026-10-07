@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="23.903" tests="15" errors="0" skipped="0" failures="10">
+  <properties>
+    <property name="java.specification.version" value="24"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\RYZEN\Documents\Codex\2026-10-06\c\outputs\antique-qa-submission\api-tests\target\test-classes;C:\Users\RYZEN\Documents\Codex\2026-10-06\c\outputs\antique-qa-submission\api-tests\target\classes;C:\Users\RYZEN\.m2\repository\io\rest-assured\rest-assured\5.5.0\rest-assured-5.5.0.jar;C:\Users\RYZEN\.m2\repository\org\apache\groovy\groovy\4.0.22\groovy-4.0.22.jar;C:\Users\RYZEN\.m2\repository\org\apache\groovy\groovy-xml\4.0.22\groovy-xml-4.0.22.jar;C:\Users\RYZEN\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\RYZEN\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\RYZEN\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\RYZEN\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\RYZEN\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\RYZEN\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\RYZEN\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\RYZEN\.m2\repository\io\rest-assured\json-path\5.5.0\json-path-5.5.0.jar;C:\Users\RYZEN\.m2\repository\org\apache\groovy\groovy-json\4.0.22\groovy-json-4.0.22.jar;C:\Users\RYZEN\.m2\repository\io\rest-assured\rest-assured-common\5.5.0\rest-assured-common-5.5.0.jar;C:\Users\RYZEN\.m2\repository\io\rest-assured\xml-path\5.5.0\xml-path-5.5.0.jar;C:\Users\RYZEN\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\RYZEN\.m2\repository\org\jsoup\jsoup\1.18.3\jsoup-1.18.3.jar;C:\Users\RYZEN\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\RYZEN\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\RYZEN\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\RYZEN\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\RYZEN\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.18.2\jackson-databind-2.18.2.jar;C:\Users\RYZEN\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.2\jackson-annotations-2.18.2.jar;C:\Users\RYZEN\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.18.2\jackson-core-2.18.2.jar;C:\Users\RYZEN\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\RYZEN\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\RYZEN\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\RYZEN\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\RYZEN\.m2\repository\org\slf4j\slf4j-simple\1.7.36\slf4j-simple-1.7.36.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="24"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-24\bin"/>
+    <property name="sun.java.command" value="C:\Users\RYZEN\AppData\Local\Temp\surefire17444154953014638864\surefirebooter-20261007000123495_3.jar C:\Users\RYZEN\AppData\Local\Temp\surefire17444154953014638864 2026-10-07T00-01-23_120-jvmRun1 surefire-20261007000123495_1tmp surefire_0-20261007000123495_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\RYZEN\Documents\Codex\2026-10-06\c\outputs\antique-qa-submission\api-tests\target\test-classes;C:\Users\RYZEN\Documents\Codex\2026-10-06\c\outputs\antique-qa-submission\api-tests\target\classes;C:\Users\RYZEN\.m2\repository\io\rest-assured\rest-assured\5.5.0\rest-assured-5.5.0.jar;C:\Users\RYZEN\.m2\repository\org\apache\groovy\groovy\4.0.22\groovy-4.0.22.jar;C:\Users\RYZEN\.m2\repository\org\apache\groovy\groovy-xml\4.0.22\groovy-xml-4.0.22.jar;C:\Users\RYZEN\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\RYZEN\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\RYZEN\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\RYZEN\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\RYZEN\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\RYZEN\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\RYZEN\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\RYZEN\.m2\repository\io\rest-assured\json-path\5.5.0\json-path-5.5.0.jar;C:\Users\RYZEN\.m2\repository\org\apache\groovy\groovy-json\4.0.22\groovy-json-4.0.22.jar;C:\Users\RYZEN\.m2\repository\io\rest-assured\rest-assured-common\5.5.0\rest-assured-common-5.5.0.jar;C:\Users\RYZEN\.m2\repository\io\rest-assured\xml-path\5.5.0\xml-path-5.5.0.jar;C:\Users\RYZEN\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\RYZEN\.m2\repository\org\jsoup\jsoup\1.18.3\jsoup-1.18.3.jar;C:\Users\RYZEN\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\RYZEN\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\RYZEN\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\RYZEN\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\RYZEN\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.18.2\jackson-databind-2.18.2.jar;C:\Users\RYZEN\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.2\jackson-annotations-2.18.2.jar;C:\Users\RYZEN\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.18.2\jackson-core-2.18.2.jar;C:\Users\RYZEN\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\RYZEN\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\RYZEN\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\RYZEN\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\RYZEN\.m2\repository\org\slf4j\slf4j-simple\1.7.36\slf4j-simple-1.7.36.jar;"/>
+    <property name="allure.results.directory" value="target/allure-results"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\RYZEN"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-03-18"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-24"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\RYZEN\Documents\Codex\2026-10-06\c\outputs\antique-qa-submission\api-tests"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\RYZEN\AppData\Local\Temp\surefire17444154953014638864\surefirebooter-20261007000123495_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="seed" value="43"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="24+36-3646"/>
+    <property name="user.name" value="RYZEN"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\RYZEN\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\RYZEN\AppData\Local\Temp\"/>
+    <property name="java.version" value="24"/>
+    <property name="user.dir" value="C:\Users\RYZEN\Documents\Codex\2026-10-06\c\outputs\antique-qa-submission\api-tests"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-24\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\RYZEN\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell;C:\Users\RYZEN\.codex\tmp\arg0\codex-arg0itMndF;C:\Users\RYZEN\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\libheif\libheif\bin;C:\Users\RYZEN\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\jxrlib\jxrlib\bin;C:\Users\RYZEN\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\poppler\Library\bin;C:\Users\RYZEN\.cache\codex-runtimes\codex-primary-runtime\dependencies\bin\override;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\RYZEN\AppData\Local\Android\Sdk\cmdline-tools;C:\flutter\src\bin;C:\ProgramData\chocolatey\bin;C:\hadoop-3.3.4\bin;C:\hadoop-3.3.4\sbin;C:\Java\jdk-18.0.1.1\bin;C:\Program Files\Git\cmd;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\RYZEN\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\RYZEN\AppData\Local\Programs\Python\Python311\;C:\Users\RYZEN\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell;C:\Users\RYZEN\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\bin;C:\MinGW\bin;C:\Users\RYZEN\AppData\Local\Android\Sdk\platform-tools;C:\Users\RYZEN\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\PostgreSQL\16\bin;C:\Users\RYZEN\AppData\Roaming\npm;C:\Users\RYZEN\AppData\Local\Programs\DockerDesktop\resources\bin;C:\Users\RYZEN\.cache\codex-runtimes\codex-primary-runtime\dependencies\bin\fallback;C:\Users\RYZEN\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin;C:\Users\RYZEN\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\git\cmd;C:\Users\RYZEN\AppData\Local\OpenAI\Codex\bin\26f5cb65bac96647;C:\Users\RYZEN\AppData\Local\OpenAI\Codex\bin\5ea220ae823df3d7;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="24+36-3646"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="68.0"/>
+  </properties>
+  <testcase name="transactionSearch" classname="qa.api.BankTests" time="0.682">
+    <system-out><![CDATA[{"event":"random-order","seed":43}
+{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/14321/accounts","status":200}
+{"event":"http","method":"POST","path":"deposit","status":200}
+{"event":"http","method":"POST","path":"withdraw","status":200}
+{"event":"http","method":"GET","path":"accounts/16119/transactions/amount/12.34","status":200}
+{"event":"http","method":"GET","path":"accounts/16119/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/16119/transactions/month/44/type/Credit","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="movementAndLedger" classname="qa.api.BankTests" time="2.186">
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/14432/accounts","status":200}
+{"event":"http","method":"GET","path":"accounts/16230","status":200}
+{"event":"http","method":"POST","path":"createAccount","status":200}
+{"event":"http","method":"GET","path":"accounts/16341","status":200}
+{"event":"http","method":"GET","path":"accounts/16230","status":200}
+{"event":"http","method":"POST","path":"createAccount","status":200}
+{"event":"http","method":"GET","path":"accounts/16452","status":200}
+{"event":"http","method":"GET","path":"accounts/16230","status":200}
+{"event":"http","method":"POST","path":"deposit","status":200}
+{"event":"http","method":"GET","path":"accounts/16341","status":200}
+{"event":"http","method":"GET","path":"accounts/16452","status":200}
+{"event":"http","method":"POST","path":"transfer","status":200}
+{"event":"http","method":"GET","path":"accounts/16341","status":200}
+{"event":"http","method":"GET","path":"accounts/16452","status":200}
+{"event":"http","method":"POST","path":"billpay","status":200}
+{"event":"http","method":"GET","path":"accounts/16341","status":200}
+{"event":"http","method":"GET","path":"accounts/16452","status":200}
+{"event":"http","method":"GET","path":"accounts/16341/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/16341","status":200}
+{"event":"http","method":"GET","path":"accounts/16452/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/16452","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="negativeDepositCannotReduceBalance" classname="qa.api.BankTests" time="0.14">
+    <failure message="The following asserts failed:&#10;	Negative deposit accepted expected [true] but found [false],&#10;	Negative deposit reduced balance expected [0] but found [-1]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+The following asserts failed:
+	Negative deposit accepted expected [true] but found [false],
+	Negative deposit reduced balance expected [0] but found [-1]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at qa.api.BankTests.negativeDepositCannotReduceBalance(BankTests.java:161)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+]]></failure>
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"customers/14543","status":200}
+{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/14654/accounts","status":200}
+{"event":"http","method":"GET","path":"accounts/16674","status":200}
+{"event":"http","method":"POST","path":"deposit","status":200}
+{"event":"http","method":"GET","path":"accounts/16674","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="invalidTransfers[insufficient, 999999.00](1)" classname="qa.api.BankTests" time="0.566">
+    <failure message="The following asserts failed:&#10;	Invalid movement must be rejected: 200 expected [true] but found [false],&#10;	Error response must have the documented plain-text error shape expected [true] but found [false],&#10;	Rejected movement changed balance expected [0] but found [-1],&#10;	Rejected movement changed source ledger: lists don&apos;t have the same size expected [1] but found [2],&#10;	Rejected movement changed destination expected [0] but found [1],&#10;	Rejected movement changed destination ledger: lists don&apos;t have the same size expected [1] but found [2]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+The following asserts failed:
+	Invalid movement must be rejected: 200 expected [true] but found [false],
+	Error response must have the documented plain-text error shape expected [true] but found [false],
+	Rejected movement changed balance expected [0] but found [-1],
+	Rejected movement changed source ledger: lists don't have the same size expected [1] but found [2],
+	Rejected movement changed destination expected [0] but found [1],
+	Rejected movement changed destination ledger: lists don't have the same size expected [1] but found [2]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at qa.api.BankTests.invalidTransfers(BankTests.java:114)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+]]></failure>
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"customers/14654","status":200}
+{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/14765/accounts","status":200}
+{"event":"http","method":"POST","path":"createAccount","status":200}
+{"event":"http","method":"GET","path":"accounts/16785","status":200}
+{"event":"http","method":"GET","path":"accounts/16785/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/16896","status":200}
+{"event":"http","method":"GET","path":"accounts/16896/transactions","status":200}
+{"event":"http","method":"POST","path":"transfer","status":200}
+{"event":"http","method":"GET","path":"accounts/16785","status":200}
+{"event":"http","method":"GET","path":"accounts/16785/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/16896","status":200}
+{"event":"http","method":"GET","path":"accounts/16896/transactions","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="invalidTransfers[negative, -1.00](2)" classname="qa.api.BankTests" time="0.52">
+    <failure message="The following asserts failed:&#10;	Invalid movement must be rejected: 200 expected [true] but found [false],&#10;	Error response must have the documented plain-text error shape expected [true] but found [false],&#10;	Rejected movement changed balance expected [0] but found [1],&#10;	Rejected movement changed source ledger: lists don&apos;t have the same size expected [1] but found [2],&#10;	Rejected movement changed destination expected [0] but found [-1],&#10;	Rejected movement changed destination ledger: lists don&apos;t have the same size expected [1] but found [2]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+The following asserts failed:
+	Invalid movement must be rejected: 200 expected [true] but found [false],
+	Error response must have the documented plain-text error shape expected [true] but found [false],
+	Rejected movement changed balance expected [0] but found [1],
+	Rejected movement changed source ledger: lists don't have the same size expected [1] but found [2],
+	Rejected movement changed destination expected [0] but found [-1],
+	Rejected movement changed destination ledger: lists don't have the same size expected [1] but found [2]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at qa.api.BankTests.invalidTransfers(BankTests.java:114)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+]]></failure>
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"customers/14765","status":200}
+{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/14876/accounts","status":200}
+{"event":"http","method":"POST","path":"createAccount","status":200}
+{"event":"http","method":"GET","path":"accounts/17007","status":200}
+{"event":"http","method":"GET","path":"accounts/17007/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/17118","status":200}
+{"event":"http","method":"GET","path":"accounts/17118/transactions","status":200}
+{"event":"http","method":"POST","path":"transfer","status":200}
+{"event":"http","method":"GET","path":"accounts/17007","status":200}
+{"event":"http","method":"GET","path":"accounts/17007/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/17118","status":200}
+{"event":"http","method":"GET","path":"accounts/17118/transactions","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="invalidTransfers[zero, 0](3)" classname="qa.api.BankTests" time="0.35">
+    <failure message="The following asserts failed:&#10;	Invalid movement must be rejected: 200 expected [true] but found [false],&#10;	Error response must have the documented plain-text error shape expected [true] but found [false],&#10;	Rejected movement changed source ledger: lists don&apos;t have the same size expected [1] but found [2],&#10;	Rejected movement changed destination ledger: lists don&apos;t have the same size expected [1] but found [2]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+The following asserts failed:
+	Invalid movement must be rejected: 200 expected [true] but found [false],
+	Error response must have the documented plain-text error shape expected [true] but found [false],
+	Rejected movement changed source ledger: lists don't have the same size expected [1] but found [2],
+	Rejected movement changed destination ledger: lists don't have the same size expected [1] but found [2]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at qa.api.BankTests.invalidTransfers(BankTests.java:114)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+]]></failure>
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"customers/14876","status":200}
+{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/14987/accounts","status":200}
+{"event":"http","method":"POST","path":"createAccount","status":200}
+{"event":"http","method":"GET","path":"accounts/17229","status":200}
+{"event":"http","method":"GET","path":"accounts/17229/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/17340","status":200}
+{"event":"http","method":"GET","path":"accounts/17340/transactions","status":200}
+{"event":"http","method":"POST","path":"transfer","status":200}
+{"event":"http","method":"GET","path":"accounts/17229","status":200}
+{"event":"http","method":"GET","path":"accounts/17229/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/17340","status":200}
+{"event":"http","method":"GET","path":"accounts/17340/transactions","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="invalidTransfers[nonnumeric, abc](4)" classname="qa.api.BankTests" time="0.503">
+    <failure message="The following asserts failed:&#10;	Error body missing expected [false] but found [true],&#10;	Error response must have the documented plain-text error shape expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+The following asserts failed:
+	Error body missing expected [false] but found [true],
+	Error response must have the documented plain-text error shape expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at qa.api.BankTests.invalidTransfers(BankTests.java:114)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+]]></failure>
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"customers/14987","status":200}
+{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/15098/accounts","status":200}
+{"event":"http","method":"POST","path":"createAccount","status":200}
+{"event":"http","method":"GET","path":"accounts/17451","status":200}
+{"event":"http","method":"GET","path":"accounts/17451/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/17562","status":200}
+{"event":"http","method":"GET","path":"accounts/17562/transactions","status":200}
+{"event":"http","method":"POST","path":"transfer","status":404}
+{"event":"http","method":"GET","path":"accounts/17451","status":200}
+{"event":"http","method":"GET","path":"accounts/17451/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/17562","status":200}
+{"event":"http","method":"GET","path":"accounts/17562/transactions","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="invalidTransfers[missing-target, 1.00](5)" classname="qa.api.BankTests" time="0.322">
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"customers/15098","status":200}
+{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/15209/accounts","status":200}
+{"event":"http","method":"GET","path":"accounts/17673","status":200}
+{"event":"http","method":"GET","path":"accounts/17673/transactions","status":200}
+{"event":"http","method":"POST","path":"transfer","status":400}
+{"event":"http","method":"GET","path":"accounts/17673","status":200}
+{"event":"http","method":"GET","path":"accounts/17673/transactions","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="concurrentWithdrawals" classname="qa.api.BankTests" time="0.527">
+    <failure message="The following asserts failed:&#10;	Lost update: accepted debits do not match balance expected [0] but found [1],&#10;	Final balance does not reconcile with withdrawal ledger and opening baseline expected [0] but found [1]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+The following asserts failed:
+	Lost update: accepted debits do not match balance expected [0] but found [1],
+	Final balance does not reconcile with withdrawal ledger and opening baseline expected [0] but found [1]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at qa.api.BankTests.concurrentWithdrawals(BankTests.java:278)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+]]></failure>
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/15320/accounts","status":200}
+{"event":"http","method":"GET","path":"accounts/17784","status":200}
+{"event":"http","method":"POST","path":"withdraw","status":200}
+{"event":"http","method":"POST","path":"withdraw","status":200}
+{"event":"http","method":"POST","path":"withdraw","status":200}
+{"event":"http","method":"POST","path":"withdraw","status":200}
+{"event":"http","method":"POST","path":"withdraw","status":200}
+{"event":"http","method":"POST","path":"withdraw","status":200}
+{"event":"http","method":"POST","path":"withdraw","status":200}
+{"event":"http","method":"POST","path":"withdraw","status":200}
+{"event":"http","method":"POST","path":"withdraw","status":200}
+{"event":"http","method":"POST","path":"withdraw","status":200}
+{"event":"http","method":"GET","path":"accounts/17784","status":200}
+{"event":"http","method":"GET","path":"accounts/17784/transactions","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="crossCustomerTransfer" classname="qa.api.BankTests" time="0.481">
+    <failure message="The following asserts failed:&#10;	Unauthorized debit accepted: 200 expected [true] but found [false],&#10;	Victim debited expected [0] but found [-1],&#10;	Attacker credited expected [0] but found [1]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+The following asserts failed:
+	Unauthorized debit accepted: 200 expected [true] but found [false],
+	Victim debited expected [0] but found [-1],
+	Attacker credited expected [0] but found [1]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at qa.api.BankTests.crossCustomerTransfer(BankTests.java:150)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+]]></failure>
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"customers/15320","status":200}
+{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/15431/accounts","status":200}
+{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/15542/accounts","status":200}
+{"event":"http","method":"GET","path":"accounts/18006","status":200}
+{"event":"http","method":"GET","path":"accounts/17895","status":200}
+{"event":"http","method":"POST","path":"transfer","status":200}
+{"event":"http","method":"GET","path":"accounts/18006","status":200}
+{"event":"http","method":"GET","path":"accounts/17895","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="negativeWithdrawalCannotIncreaseBalance" classname="qa.api.BankTests" time="0.146">
+    <failure message="The following asserts failed:&#10;	Negative withdrawal accepted expected [true] but found [false],&#10;	Negative withdrawal credited money expected [0] but found [1]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+The following asserts failed:
+	Negative withdrawal accepted expected [true] but found [false],
+	Negative withdrawal credited money expected [0] but found [1]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at qa.api.BankTests.negativeWithdrawalCannotIncreaseBalance(BankTests.java:172)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+]]></failure>
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"customers/15431","status":200}
+{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/15653/accounts","status":200}
+{"event":"http","method":"GET","path":"accounts/18117","status":200}
+{"event":"http","method":"POST","path":"withdraw","status":200}
+{"event":"http","method":"GET","path":"accounts/18117","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="registrationAndIdentity" classname="qa.api.BankTests" time="0.111">
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"customers/15653","status":200}
+{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/15764/accounts","status":200}
+{"event":"http","method":"GET","path":"customers/15764","status":200}
+{"event":"http","method":"GET","path":"accounts/18228","status":200}
+{"event":"http","method":"GET","path":"accounts/18228","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="crossCustomerTransactionRead" classname="qa.api.BankTests" time="0.295">
+    <failure message="Another customer&apos;s transactions exposed: 200 expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Another customer's transactions exposed: 200 expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at qa.api.BankTests.crossCustomerTransactionRead(BankTests.java:123)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+]]></failure>
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/15986/accounts","status":200}
+{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/16097/accounts","status":200}
+{"event":"http","method":"POST","path":"deposit","status":200}
+{"event":"http","method":"GET","path":"accounts/18561/transactions","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="deployedXmlSchema" classname="qa.api.ContractTests" time="1.208">
+    <failure message="Deployed contract validation failed: cvc-elt.1.a: Cannot find the declaration of element &apos;account&apos;." type="java.lang.IllegalArgumentException"><![CDATA[java.lang.IllegalArgumentException: Deployed contract validation failed: cvc-elt.1.a: Cannot find the declaration of element 'account'.
+	at qa.api.service.ContractValidator.validate(ContractValidator.java:126)
+	at qa.api.ContractTests.deployedXmlSchema(ContractTests.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 65; cvc-elt.1.a: Cannot find the declaration of element 'account'.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2133)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:830)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:376)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver.scanRootElementHook(XMLNSDocumentScannerImpl.java:615)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3089)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:866)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:113)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.validation.StreamValidatorHelper.validate(StreamValidatorHelper.java:176)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorImpl.validate(ValidatorImpl.java:115)
+	at java.xml/javax.xml.validation.Validator.validate(Validator.java:124)
+	at qa.api.service.ContractValidator.validate(ContractValidator.java:123)
+	... 17 more
+]]></failure>
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/14543/accounts","status":200}
+{"event":"http","method":"GET","path":"?_wadl","status":200}
+{"event":"http","method":"GET","path":"accounts/16563","status":200}
+]]></system-out>
+  </testcase>
+  <testcase name="jsonXmlParity" classname="qa.api.ContractTests" time="0.239">
+    <system-out><![CDATA[{"event":"http","method":"GET","path":"login/[REDACTED]/[REDACTED]","status":200}
+{"event":"http","method":"GET","path":"customers/15875/accounts","status":200}
+{"event":"http","method":"GET","path":"customers/15875","status":200}
+{"event":"http","method":"GET","path":"customers/15875","status":200}
+{"event":"http","method":"GET","path":"accounts/18339","status":200}
+{"event":"http","method":"GET","path":"accounts/18339","status":200}
+{"event":"http","method":"GET","path":"accounts/18339/transactions","status":200}
+{"event":"http","method":"GET","path":"accounts/18339/transactions","status":200}
+]]></system-out>
+  </testcase>
+</testsuite>

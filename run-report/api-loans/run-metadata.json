@@ -1,0 +1,10 @@
+{
+  "exit_code": 0,
+  "flags": [
+    "-Dgroups=loans"
+  ],
+  "module": "api-tests",
+  "label": "api-loans",
+  "finished": "2026-10-07T16:00:47.5394787+05:30",
+  "started": "2026-10-07T16:00:30.0814654+05:30"
+}

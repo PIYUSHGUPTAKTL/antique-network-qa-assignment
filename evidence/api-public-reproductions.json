@@ -1,0 +1,124 @@
+{
+  "base": "https://parabank.parasoft.com/parabank",
+  "scope": "Owned synthetic customers; no public administration, reset or concurrency",
+  "findings": [
+    {
+      "id": "API-01",
+      "operation": {
+        "method": "GET",
+        "path": "accounts/32103/transactions"
+      },
+      "owner_customer": 25310,
+      "requester_customer": 25199,
+      "response": {
+        "status": 200,
+        "body": "[{\"id\":31681,\"accountId\":32103,\"type\":\"Credit\",\"date\":1791244800000,\"amount\":10.00,\"description\":\"Deposit via Web Service\"}]",
+        "content_type": "application/json"
+      },
+      "observed": true
+    },
+    {
+      "id": "API-02",
+      "operation": {
+        "method": "POST",
+        "path": "transfer",
+        "parameters": {
+          "fromAccountId": 32103,
+          "toAccountId": 31992,
+          "amount": "1.00"
+        }
+      },
+      "before": {
+        "victim": "525.5",
+        "requester": "515.5"
+      },
+      "after": {
+        "victim": "524.5",
+        "requester": "516.5"
+      },
+      "response": {
+        "status": 200,
+        "body": "Successfully transferred $1.00 from account #32103 to account #31992",
+        "content_type": "application/json"
+      },
+      "observed": true
+    },
+    {
+      "id": "API-03",
+      "operation": {
+        "method": "POST",
+        "path": "deposit",
+        "parameters": {
+          "accountId": 32214,
+          "amount": "-10.00"
+        }
+      },
+      "before": "515.5",
+      "after": "505.5",
+      "response": {
+        "status": 200,
+        "body": "Successfully deposited $-10.00 to account #32214",
+        "content_type": "application/json"
+      },
+      "observed": true
+    },
+    {
+      "id": "API-04",
+      "operation": {
+        "method": "POST",
+        "path": "withdraw",
+        "parameters": {
+          "accountId": 32325,
+          "amount": "-10.00"
+        }
+      },
+      "before": "515.5",
+      "after": "525.5",
+      "response": {
+        "status": 200,
+        "body": "Successfully withdrew $-10.00 from account #32325",
+        "content_type": "application/json"
+      },
+      "observed": true
+    },
+    {
+      "id": "API-05",
+      "operation": {
+        "method": "POST",
+        "path": "transfer",
+        "parameters": {
+          "fromAccountId": 32436,
+          "toAccountId": 32547,
+          "amount": "416.50"
+        }
+      },
+      "before": "415.5",
+      "after": "-1.0",
+      "response": {
+        "status": 200,
+        "body": "Successfully transferred $416.50 from account #32436 to account #32547",
+        "content_type": "application/json"
+      },
+      "observed": true
+    },
+    {
+      "id": "API-06",
+      "operation": {
+        "method": "GET",
+        "path": "accounts/32436",
+        "accept": "application/xml"
+      },
+      "declared_namespaces": [
+        "http://service.parabank.parasoft.com/",
+        "http://service.parabank.parasoft.com/"
+      ],
+      "actual_root": "account",
+      "response": {
+        "status": 200,
+        "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><account><id>32436</id><customerId>25643</customerId><type>CHECKING</type><balance>-1.00</balance></account>",
+        "content_type": "application/xml"
+      },
+      "observed": true
+    }
+  ]
+}

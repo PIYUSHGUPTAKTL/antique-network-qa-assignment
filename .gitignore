@@ -1,0 +1,8 @@
+**/target/
+.env
+**/.env
+*.log
+.superpowers/
+**/allure-report/
+**/__pycache__/
+*.pyc

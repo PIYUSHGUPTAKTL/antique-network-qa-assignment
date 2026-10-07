@@ -1,0 +1,18 @@
+# Concrete instability and mitigation
+
+1. **AJAX accordion transitions and dependent dropdowns.** Checkout loads payment/shipping blocks after earlier submissions; zones load after country selection. Clickable/visible explicit waits and a wait that selects the required zone while tolerating DOM replacement avoid arbitrary sleeps. A jQuery-idle check supplements business-state waits. Page objects do not cache WebElements. Remaining risk: idle alone is not proof that the intended response succeeded; relevant page/field assertions must still pass.
+2. **Shared or colliding mutable fixtures.** Categories/products, customers and promotions use runtime UUID names and model codes. Two browsers isolate admin/customer cookies in a ThreadLocal pair. Read-back uses exact owned IDs and cleanup runs after failed assertions. Fixture SQL is parameterized. Currency creation is serialized because native currency code is global. Remaining gap: direct SQL seeding of option values and category links bypasses admin entry and is disclosed.
+3. **Version/environment-sensitive behavior.** Browser downloads, server cold start, currencies and partial language packs affect results. Application source is pinned, Compose waits for health, currency auto-update is off, taxes/shipping are deterministic, and both headless browsers are exercised. Console capture explicitly records Firefox's unsupported log command. Base image digests are recorded where available. The minimal QA language pack is a test fixture, not full localization certification.
+
+## Retries
+Observed native file-cache race: simultaneous admin requests deleted cache.store between existence checking and fopen, causing an OpenCart PHP error during product creation. The disposable store now selects OpenCart's built-in Redis cache engine, with an internal healthy Redis service and the PHP Redis extension. This is infrastructure configuration; product business logic is unchanged.
+
+Native order-history sorting uses second-resolution timestamps. A sequence submitted in the same second can render in a different order. The lifecycle fixture waits for the server clock to advance beyond the preceding history timestamp before each status submission; it does not modify timestamps or mask assertions.
+
+A later Firefox repeat exposed a cart-navigation race: jQuery could be idle while a coupon-triggered page reload was still pending. Coupon/voucher and quantity/removal now wait for the old content to become stale (or a validation error for coupon rejection), and total reading waits for rendered total rows. The same repeat had browser startup/navigation timeouts with about 1.2 GB free host RAM and leftover automated browser processes from interrupted development runs. Those owned headless processes were cleared before subsequent verification. The unsuccessful matrix remains diagnostic evidence and is not relabeled as a passing run.
+
+The final-total oracle matches the normalized label `Total` exactly, so a missing final row cannot be satisfied by `Sub-Total`. A unit boundary check verifies this distinction without opening a real browser.
+
+Firefox also refused to scroll an input into view while Bootstrap's accordion was still animating. Coupon and voucher entry now require the panel's expanded `.collapse.in` state before typing, rather than relying only on input visibility.
+
+No automatic retry is configured. A retry can duplicate orders, hide an intermittent total mismatch, or inflate a pass rate. The assignment permits at most one; zero is deliberate. Fix synchronization or fixture ownership before considering retries. CI reports all six browser attempts, counts skips as unsuccessful, and refuses to infer a 95% pass rate from missing runs.
