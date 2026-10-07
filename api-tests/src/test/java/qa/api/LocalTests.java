@@ -25,9 +25,10 @@ public class LocalTests {
     }
     SoftAssert sa = new SoftAssert();
     try {
-      admin.post("setParameter/loanProvider/local", Map.of());
-      admin.post("setParameter/loanProcessor/down", Map.of());
-      admin.post("setParameter/loanProcessorThreshold/20", Map.of());
+      assertEquals(admin.post("setParameter/loanProvider/local", Map.of()).statusCode(), 204);
+      assertEquals(admin.post("setParameter/loanProcessor/down", Map.of()).statusCode(), 204);
+      assertEquals(
+          admin.post("setParameter/loanProcessorThreshold/20", Map.of()).statusCode(), 204);
       Allure.addAttachment(
           "loan settings",
           "provider=local processor=down threshold=20% (ratio rounded to three decimals)");
@@ -66,21 +67,27 @@ public class LocalTests {
         }
         f.client().attach();
       }
-      admin.post("setParameter/loanProcessor/funds", Map.of());
+      assertEquals(admin.post("setParameter/loanProcessor/funds", Map.of()).statusCode(), 204);
       for (String available : List.of("19.90", "20.00", "30.00")) {
         Fixture f = CustomerSetup.create();
         BigDecimal initial = f.client().balance(f.accountId());
-        f.client()
-            .post(
-                "withdraw",
-                Map.of(
-                    "accountId",
-                    f.accountId(),
-                    "amount",
-                    initial.subtract(new BigDecimal(available)).toPlainString()));
+        var preparation =
+            f.client()
+                .post(
+                    "withdraw",
+                    Map.of(
+                        "accountId",
+                        f.accountId(),
+                        "amount",
+                        initial.subtract(new BigDecimal(available)).toPlainString()));
         BigDecimal baseline = f.client().balance(f.accountId());
+        assertEquals(preparation.statusCode(), 200, "Loan balance preparation failed");
+        assertEquals(
+            baseline.compareTo(new BigDecimal(available)),
+            0,
+            "Loan fixture must have the requested available balance before evaluating rules");
         boolean expected =
-            baseline
+            new BigDecimal(available)
                     .divide(new BigDecimal("100"), 3, RoundingMode.HALF_UP)
                     .compareTo(new BigDecimal("0.200"))
                 >= 0;

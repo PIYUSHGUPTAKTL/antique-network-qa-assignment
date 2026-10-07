@@ -10,16 +10,16 @@ mean the public ParaBank was fixed.
 From the repository root:
 
 ```powershell
-$env:DOCKER_API_VERSION='1.47' # Required by this host's Compose/engine combination.
+# Optional only for the candidate's Compose/engine mismatch: $env:DOCKER_API_VERSION='1.47'
 docker compose -f api-tests/docker-compose.yml -f api-tests/docker-compose.patched.yml up -d --build --wait
-$env:JAVA_HOME='C:/Program Files/Java/jdk-24'
+# JAVA_HOME must point to your installed JDK 17+.
 . ./scripts/configure.ps1
 $env:API_BASE='http://127.0.0.1:8081/parabank'
 ./api-tests/mvnw.cmd -f api-tests/pom.xml clean test
-./api-tests/mvnw.cmd -f api-tests/pom.xml clean test -Pintegration -Dseed=42
-./api-tests/mvnw.cmd -f api-tests/pom.xml clean test -Pintegration -Dseed=43
-./api-tests/mvnw.cmd -f api-tests/pom.xml clean test -Dgroups=loans
-./api-tests/mvnw.cmd -f api-tests/pom.xml clean test -Dgroups=reset
+./api-tests/mvnw.cmd -f api-tests/pom.xml clean test -Pintegration '-Dseed=42'
+./api-tests/mvnw.cmd -f api-tests/pom.xml clean test -Pintegration '-Dseed=43'
+./api-tests/mvnw.cmd -f api-tests/pom.xml clean test '-Dgroups=loans'
+./api-tests/mvnw.cmd -f api-tests/pom.xml clean test '-Dgroups=reset'
 python scripts/verify_bank_patch.py --output boundary-verification.json
 ```
 
@@ -92,7 +92,8 @@ remains a separate unchanged assertion.
 Full upstream ParaBank unit/IT suites were not executed; some upstream tests
 explicitly expect overdrafts, which conflict with the approved local policy.
 The verification boundary is the compiled pinned-image overlay and the real
-assignment/regression suites. Grid, hosted CI, native JDK 17 execution, external
-REST/SOAP deployments and production security completeness are not claimed.
+assignment/regression suites. Hosted API CI on JDK 17 is verified in README.md. Full Grid scenarios, native
+local JDK 17 execution, external REST/SOAP deployments and production security
+completeness are not claimed.
 Existing UI feature gaps in COVERAGE.md still apply. Zero-value HTML bill-payment
 policy is unchanged; the external API rejects it.

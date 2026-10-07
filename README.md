@@ -1,105 +1,109 @@
-# Antique Network QA submission
+# Antique Network QA assignment
 
-## Latest verification and review guide
+Java 17, Selenium 4, TestNG and Rest Assured frameworks for the supplied SDET assignment. Each UI test has separate admin/customer sessions and owned fixtures; API tests use fresh customers, independent decimal arithmetic and ledger reconciliation.
 
-The corrected local run on 7 October 2026 passed **67/67 Maven/TestNG executions**, **33/33 additional boundary regressions**, and **5/5 report utility checks**, with no failures, errors or skips. These are executions across both browsers and two API seeds, not 67 unique test designs.
+## Reviewer guide
 
-- [Full execution report](run-report/Full_Project_Run_Report.html) (or [PDF](run-report/Full_Project_Run_Report.pdf)): original failure analysis, fixes, complete final results and limitations.
-- `ui-automation/`: Java Selenium/TestNG framework, Docker Compose, FLAKINESS.md and PYRAMID.md.
-- `api-tests/`: layered Java Rest Assured framework, TEST_PLAN.md and DEFECT_REPORT.md.
-- `DECISIONS.md` and `COVERAGE.md`: trade-offs, AI use and scope.
-- `.github/workflows/`: UI/API CI workflows; hosted API success is recorded below, and UI status is separate.
+1. Read [COVERAGE.md](COVERAGE.md) for requirements and limits, [DECISIONS.md](DECISIONS.md) for trade-offs and AI disclosure.
+2. Inspect [API risk plan](api-tests/TEST_PLAN.md), [six reproduced defects](api-tests/DEFECT_REPORT.md), [UI instability analysis](ui-automation/FLAKINESS.md) and [test pyramid](ui-automation/PYRAMID.md).
+3. Read [review findings and fixes](run-report/Reviewer_Report.html) and run the commands below. Raw XML and JSON evidence are kept alongside reports.
 
-**The default bank Compose file runs the original official demo and deliberately exposes its defects.** To reproduce the green corrected run, use `api-tests/patch/README.md` and its additional Compose overlay. Public ParaBank was not modified. Original defect evidence remains under `evidence/`; the optional application patch supplements the assignment's defect analysis.
+The optional local ParaBank patch fixes the demonstrated banking defects. **Passing patched tests do not mean the public demo is fixed.** The original pinned image remains available for defect reproduction. OpenCart business logic is unchanged; native percentage options and customer-visible voucher remainder are disclosed unsupported assertions. SQL category/option fixtures and a minimal language pack are also disclosed.
 
-This essential submission includes source, wrappers, configuration, documentation, sanitized defect evidence, final raw Surefire XML and result summaries. Build outputs, credentials, caches, duplicate Allure assets and development diagnostic archives are excluded. The full diagnostic bundle referenced in the report is retained in the candidate's local fixed submission ZIP; those diagnostic paths are not all included here. Allure attachments are generated when the suites run.
+## Verification
 
-## Hosted API verification
-
-The corrected [API repeatability run](https://github.com/PIYUSHGUPTAKTL/antique-network-qa-assignment/actions/runs/37611113628) passed **45/45 executions** on GitHub with JDK 17: 13 unit tests, both 15-case API seeds, one loan scenario and one reset scenario; no failures, errors or skips. Exact hosted results and raw XML are in `run-report/github-ci/`. The first workflow used the unpatched demo and failed 10 cases per seed; its historical results remain visible. API CI now builds the optional local patch overlay while retaining every business assertion. Hosted UI verification is a separate workflow and is not implied by this API result.
-
-## Framework setup and commands
-
-
-An opt-in local remediation is available in [api-tests/patch/README.md](api-tests/patch/README.md).
-It patches the local bank and preserves the original demo as the default baseline.
-Use the Compose overlay documented there to reproduce the corrected application runs.
-
-Java UI and API automation for the supplied SDET take-home assignment. Read **COVERAGE.md** first: it distinguishes verified behavior, product defects, framework failures and unsupported requirements. Six ParaBank defects were reproduced on the public deployment and a pinned local instance; see api-tests/DEFECT_REPORT.md and evidence/. Do not assume that defect-detecting integration suites are green.
+- [Hosted API run](https://github.com/PIYUSHGUPTAKTL/antique-network-qa-assignment/actions/runs/37611113628): 45/45 passed on JDK 17 before this review's stricter oracles.
+- [Hosted UI run](https://github.com/PIYUSHGUPTAKTL/antique-network-qa-assignment/actions/runs/37611113458): all seven scenarios, Chrome/Firefox three attempts each, 42/42 passed (100%).
+- [Earlier complete local report](run-report/Full_Project_Run_Report.html), also [PDF](run-report/Full_Project_Run_Report.pdf): 67 project executions, 33 boundary checks and five reporting checks passed. These are historical counts; the review adds regression checks.
+- Latest post-review results are recorded in [Reviewer_Report.html](run-report/Reviewer_Report.html). Counts are executions, not unique designs; original failed evidence remains under `evidence/`.
 
 ## Prerequisites
-JDK 17+ with JAVA_HOME pointing to the JDK, Docker Desktop with Linux containers / Docker Compose v2, Python 3 for evidence utilities, Chrome and Firefox for local mode (Selenium Manager resolves drivers), internet access on first build. Maven Wrapper downloads Maven 3.9.9; no global Maven installation required. In Windows PowerShell, use .\mvnw.cmd; in Bash use ./mvnw. Docker Grid supplies browser binaries as an alternative.
 
-## Windows: start the exact local environments
-From this repository root, in PowerShell:
+JDK 17+ with `JAVA_HOME` set to your installation, Docker Desktop using Linux containers with Compose v2, Python 3, and Chrome/Firefox for local headless runs. Maven Wrapper downloads Maven 3.9.9; no global Maven is required. First builds need internet access. Commands below run from the repository root.
+
+## Windows PowerShell: reproduce the corrected local suites
+
 ```powershell
-# Change only this example JDK path to your actual installation.
-$env:JAVA_HOME='C:\Program Files\Java\jdk-24'
+# Set JAVA_HOME to your installed JDK 17+ if it is not already configured.
 . .\scripts\configure.ps1
 docker compose -f ui-automation/docker-compose.yml up -d --build --wait
-docker compose -f api-tests/docker-compose.yml up -d --wait
-```
-configure.ps1 generates credentials into ignored ui-automation/.env once and imports them into the current shell. Dot-source it again when opening a new shell. Keep that file private. UI: http://localhost:8080/ and /admin/. API: http://localhost:8081/parabank. The admin is a uniquely named QA account, not a seeded default account. If port 8081 is occupied by an earlier manual QA-bank container, stop that owned container before Compose startup; do not remove unrelated containers.
+docker compose -f api-tests/docker-compose.yml -f api-tests/docker-compose.patched.yml up -d --build --wait
+$env:API_BASE='http://127.0.0.1:8081/parabank'
 
-## Linux / macOS
-```bash
-source scripts/configure.sh
-chmod +x ui-automation/mvnw api-tests/mvnw
-docker compose -f ui-automation/docker-compose.yml up -d --build --wait
-docker compose -f api-tests/docker-compose.yml up -d --wait
-```
-
-## Framework checks and UI scenarios
-```powershell
 .\ui-automation\mvnw.cmd -f ui-automation/pom.xml test
 .\api-tests\mvnw.cmd -f api-tests/pom.xml test
-.\ui-automation\mvnw.cmd -f ui-automation/pom.xml '-Dgroups=browser' test
+python scripts/test_summary.py
+
+$env:UI_BROWSER='chrome'
 .\ui-automation\mvnw.cmd -f ui-automation/pom.xml -Pintegration test
 $env:UI_BROWSER='firefox'
 .\ui-automation\mvnw.cmd -f ui-automation/pom.xml -Pintegration test
-```
-The default UI suite has two parallel methods, each with an admin/customer browser pair. UI_BROWSER=chrome|firefox, UI_HEADLESS=true|false. For Docker Grid:
-```powershell
-docker compose -f ui-automation/docker-compose.yml --profile grid up -d
-$env:UI_GRID='http://localhost:4444/wd/hub'  # Firefox node: port 4445
-$env:UI_BASE='http://host.docker.internal:8080/'
-$env:STORE_URL=$env:UI_BASE
-docker compose -f ui-automation/docker-compose.yml up -d --force-recreate store
-.\ui-automation\mvnw.cmd -f ui-automation/pom.xml -Pintegration test
-```
-For Firefox set UI_BROWSER=firefox and UI_GRID=http://localhost:4445/wd/hub. Before returning to local browsers, clear UI_GRID, restore UI_BASE and STORE_URL to http://localhost:8080/, and recreate the store. Local and CI use local browsers by default. See COVERAGE.md for which paths were actually exercised.
-
-## API execution
-```powershell
 .\api-tests\mvnw.cmd -f api-tests/pom.xml -Pintegration '-Dseed=42' test
 .\api-tests\mvnw.cmd -f api-tests/pom.xml -Pintegration '-Dseed=43' test
 .\api-tests\mvnw.cmd -f api-tests/pom.xml '-Dgroups=loans' test
 .\api-tests\mvnw.cmd -f api-tests/pom.xml '-Dgroups=reset' test
 ```
-Loan/reset groups require localhost and run separately. The normal local integration suite includes one ten-worker withdrawal case. API tests run serially except that explicit concurrency case; every test registers a fresh customer using the HTML form, preserves cookies and logs in through REST. Registration and account-opening credits must be accounted for; ledger tests use newly funded accounts and independently signed transactions.
 
-Public defect reproduction is bounded and never changes global administration:
-```powershell
-python scripts/reproduce_api_defects.py --base https://parabank.parasoft.com/parabank --output evidence/my-public-reproductions.json
+`configure.ps1` creates ignored local credentials once and imports them into the current shell. Dot-source it again in a new shell. Never upload `.env`. Storefront/admin: `http://localhost:8080/` and `/admin/`; bank: `http://127.0.0.1:8081/parabank`. Ports must be free. Use owned-container teardown before switching banking variants; do not remove unrelated containers. A Compose/engine compatibility workaround used on the candidate's Windows host is documented in the patch guide and is optional elsewhere.
+
+## Linux/macOS
+
+```bash
+source scripts/configure.sh
+chmod +x ui-automation/mvnw api-tests/mvnw
+docker compose -f ui-automation/docker-compose.yml up -d --build --wait
+docker compose -f api-tests/docker-compose.yml -f api-tests/docker-compose.patched.yml up -d --build --wait
+export API_BASE=http://127.0.0.1:8081/parabank
+ui-automation/mvnw -f ui-automation/pom.xml test
+api-tests/mvnw -f api-tests/pom.xml test
+python3 scripts/test_summary.py
+UI_BROWSER=chrome ui-automation/mvnw -f ui-automation/pom.xml -Pintegration test
+UI_BROWSER=firefox ui-automation/mvnw -f ui-automation/pom.xml -Pintegration test
+api-tests/mvnw -f api-tests/pom.xml -Pintegration -Dseed=42 test
+api-tests/mvnw -f api-tests/pom.xml -Pintegration -Dseed=43 test
+api-tests/mvnw -f api-tests/pom.xml -Dgroups=loans test
+api-tests/mvnw -f api-tests/pom.xml -Dgroups=reset test
 ```
-The public API offers no per-customer deletion, so synthetic records remain. Use the local bank for repeatable suites and complete data teardown. Mid-run fixture loss is classified as EnvironmentInterrupted and must not be counted as a passed assertion or trigger mutation replay.
 
-## Configuration
-Properties in each project's src/test/resources/config.properties supply nonsecret defaults. Environment variables override properties and -D properties: UI_ADMIN_USER, UI_ADMIN_PASSWORD, DB_PASSWORD, DB_URL, DB_USER, UI_BASE, UI_BROWSER, UI_GRID, UI_HEADLESS, API_BASE, API_TIMEOUT_MS. Defaults use local application URLs; no real credentials/tokens are committed. Financial amounts are decimal strings from JSON or explicit test data.
+## Original banking defects
+
+To run the unchanged official baseline, first tear down the patched bank, then start only `api-tests/docker-compose.yml`. The same integration assertions intentionally fail on the reproduced ownership, invalid-money, concurrency and XML namespace defects. See [DEFECT_REPORT.md](api-tests/DEFECT_REPORT.md) for captured public/local evidence and minimal curl steps. The patch is an additional remediation demonstration, not a substitute for reporting the original system's behavior.
+
+Every API case registers a unique customer through the HTML form, retains cookies, logs in through REST and captures IDs. Registration/account-opening credits are included in balance expectations. Loan parameter changes, reset and ten-thread concurrency require localhost. API methods run serially except the explicit ten-worker case. Mid-run fixture loss is reported as `EnvironmentInterrupted`, never as a pass or mutation retry. No per-customer deletion is available publicly; owned local bank data is removed with Compose teardown.
+
+## Docker Grid and configuration
+
+Local headless mode is the verified default. To use the supplied Grid on this Docker Desktop setup:
+
+```powershell
+docker compose -f ui-automation/docker-compose.yml --profile grid up -d --wait
+$env:UI_GRID='http://localhost:4444/wd/hub'
+$env:UI_BASE='http://host.docker.internal:8080/'
+$env:STORE_URL=$env:UI_BASE
+docker compose -f ui-automation/docker-compose.yml up -d --force-recreate store
+.\ui-automation\mvnw.cmd -f ui-automation/pom.xml -Pintegration test
+```
+
+Firefox uses `UI_BROWSER=firefox` and Grid port 4445. Before returning locally, clear `UI_GRID`, restore `UI_BASE` and `STORE_URL` to `http://localhost:8080/`, and recreate the store. Full Grid scenario execution is not claimed. `-Dgroups=browser` runs paired-session isolation checks. Defaults are in each module's `config.properties`; environment variables override defaults and Java properties. Options include `UI_BASE`, `UI_BROWSER`, `UI_GRID`, `UI_HEADLESS`, `UI_ADMIN_USER`, `UI_ADMIN_PASSWORD`, `DB_URL`, `DB_USER`, `DB_PASSWORD`, `API_BASE` and `API_TIMEOUT_MS`.
 
 ## Reports and CI
-Surefire XML: module/target/surefire-reports. Allure results: module/target/allure-results. Generate/view reports:
+
+Surefire XML and Allure results are generated in each module's `target/`. Preserve each attempt before another `clean test`. To view Allure:
+
 ```powershell
 .\ui-automation\mvnw.cmd -f ui-automation/pom.xml allure:serve
 .\api-tests\mvnw.cmd -f api-tests/pom.xml allure:serve
 ```
-Archived essential results are the raw Surefire XML under `evidence/release/` and `run-report/`. Open `run-report/Full_Project_Run_Report.html` for the complete final results. Allure attachments and rendered Surefire HTML are generated by a fresh suite execution; duplicate historical report assets are excluded from this trimmed repository.
-UI failures attach screenshot, page source and console result for both sessions; Firefox may not support console logs. API failures attach request/response history with login secrets redacted. No automatic retries. Separate result directories per attempt keep evidence from being overwritten. UI GitHub Actions executes Chrome/Firefox three times and reports skips/missing runs honestly against 95%; API repeats seeds 42 and 43 and runs local loan/reset groups. These workflows are supplied; only actual local verification is claimed in COVERAGE.md.
+
+UI failures attach both sessions' screenshots, page sources and console collection result; unsupported Firefox logging is recorded explicitly. API failures attach sanitized request/response history. No automatic retries. The UI workflow validates exactly seven unique scenarios in each named Chrome/Firefox attempt, reports the actual rate, and fails if its 95% gate fails. The API workflow runs unit checks, two seeds, loans and reset against the patched local image. GitHub artifacts retain Allure data; this essential repository retains raw XML and compact summaries.
 
 ## Teardown and submission
-After saving reports:
+
+Save evidence, then remove only this assignment's owned data:
+
 ```powershell
-docker compose -f ui-automation/docker-compose.yml down -v
-docker compose -f api-tests/docker-compose.yml down -v
+docker compose -f ui-automation/docker-compose.yml --profile grid down -v
+docker compose -f api-tests/docker-compose.yml -f api-tests/docker-compose.patched.yml down -v
 ```
-These commands destroy only this assignment's owned Compose data. Upload the repository contents (including .github) to your GitHub repository, grant access to the panel, and reply to the assignment email with the repository link. Do not upload .env, local database volumes or credentials. DECISIONS.md discloses AI assistance and compromises. The project is published at https://github.com/PIYUSHGUPTAKTL/antique-network-qa-assignment. The repository is public, so reviewers can view it without a collaborator invitation. Reply to the assignment email with the repository link to complete submission.
+
+The [public submission repository](https://github.com/PIYUSHGUPTAKTL/antique-network-qa-assignment) is accessible without invitations. Reply to the assignment email with that link before the deadline. Source, wrappers, configuration, docs and essential evidence are included; credentials, caches, build outputs and duplicate report assets are excluded. Historical reports may mention diagnostic archives retained only in the candidate's local full bundle.

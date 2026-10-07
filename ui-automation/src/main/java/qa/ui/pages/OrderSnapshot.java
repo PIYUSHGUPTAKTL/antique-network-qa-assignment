@@ -11,24 +11,31 @@ public record OrderSnapshot(List<Line> lines, Map<String, BigDecimal> totals) {
   public static OrderSnapshot read(WebDriver driver, String scope, String ownedModel) {
     List<Line> lines = new ArrayList<>();
     Map<String, BigDecimal> totals = new TreeMap<>();
-    for (WebElement row : driver.findElements(By.cssSelector(scope + " table tr"))) {
-      List<WebElement> cells = row.findElements(By.tagName("td"));
-      if (cells.size() >= 5 && cells.get(1).getText().equals(ownedModel)) {
-        lines.add(
-            new Line(
-                ownedModel,
-                Integer.parseInt(cells.get(2).getText()),
-                Page.price(cells.get(3).getText()),
-                Page.price(cells.get(4).getText())));
-      } else if (cells.size() >= 2) {
-        int labelIndex = cells.size() > 2 && cells.get(0).getText().isBlank() ? 1 : 0;
-        String label = cells.get(labelIndex).getText().replace(":", "").trim();
-        if (Set.of("Sub-Total", "Free Shipping", "Total").contains(label)) {
-          totals.put(label, Page.price(cells.get(labelIndex + 1).getText()));
+    for (WebElement table : driver.findElements(By.cssSelector(scope + " table"))) {
+      boolean products =
+          table.findElements(By.cssSelector("thead td, thead th")).stream()
+              .anyMatch(cell -> cell.getText().equals("Model"));
+      if (!products) continue;
+      for (WebElement row : table.findElements(By.cssSelector("tbody tr, tfoot tr"))) {
+        List<WebElement> cells = row.findElements(By.tagName("td"));
+        if (cells.size() >= 5) {
+          lines.add(
+              new Line(
+                  cells.get(1).getText(),
+                  Integer.parseInt(cells.get(2).getText()),
+                  Page.price(cells.get(3).getText()),
+                  Page.price(cells.get(4).getText())));
+        } else if (cells.size() >= 2) {
+          int labelIndex = cells.size() > 2 && cells.get(0).getText().isBlank() ? 1 : 0;
+          String label = cells.get(labelIndex).getText().replace(":", "").trim();
+          if (label.isBlank()) throw new IllegalStateException("Order total label missing");
+          if (totals.put(label, Page.price(cells.get(labelIndex + 1).getText())) != null)
+            throw new IllegalStateException("Duplicate order total label: " + label);
         }
       }
     }
-    if (lines.isEmpty() || !totals.containsKey("Total")) {
+    if (lines.stream().noneMatch(line -> line.model().equals(ownedModel))
+        || !totals.containsKey("Total")) {
       throw new IllegalStateException("Rendered order products/totals missing in " + scope);
     }
     return new OrderSnapshot(List.copyOf(lines), Map.copyOf(totals));

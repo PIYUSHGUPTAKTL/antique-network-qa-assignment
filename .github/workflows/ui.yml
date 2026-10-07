@@ -22,6 +22,12 @@ jobs:
         run: |
           source scripts/configure.sh
           docker compose -f ui-automation/docker-compose.yml up -d --build --wait
+      - name: Framework and report regressions
+        shell: bash
+        run: |
+          chmod +x ui-automation/mvnw
+          ui-automation/mvnw -f ui-automation/pom.xml test
+          python3 scripts/test_summary.py
       - name: Execute three independent attempts
         env: {UI_BROWSER: '${{ matrix.browser }}'}
         shell: bash
@@ -52,6 +58,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with: {pattern: 'ui-*', path: results, merge-multiple: true}
       - name: Report actual rate against 95 percent
+        shell: bash
         run: python3 scripts/summarize_results.py results --expected-runs 6 --enforce | tee summary.json
       - uses: actions/upload-artifact@v4
         if: always()

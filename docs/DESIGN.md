@@ -1,6 +1,6 @@
 # Antique Network QA submission design
 
-Status: design approved on 6 October 2026; implementation and application results have not yet been produced.
+Status: historical design approved on 6 October 2026. Implementation and local/hosted verification are complete; current results and limits are in README.md and COVERAGE.md. Research notes below preserve the original planning context.
 
 ## Goal and deliverables
 Build a reviewable submission for the supplied five-page SDET assignment, with independent Maven projects in ui-automation/ and api-tests/, root README.md and DECISIONS.md, Docker Compose, GitHub Actions, Allure evidence, UI FLAKINESS.md and PYRAMID.md, API risk plan with at least 30 cases and five undefined-behaviour cases, and a defect report with verified reproductions. Disclose AI assistance. Do not invent defects, pass rates, or runtime observations.

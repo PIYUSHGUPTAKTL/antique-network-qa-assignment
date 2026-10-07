@@ -25,7 +25,29 @@ public class ScenarioTests extends UiBase {
         "Cart total expected=" + want + " actual=" + actual);
   }
 
+  private void total(BigDecimal want) {
+    total(want.toPlainString());
+  }
+
+  private void cartLine(BigDecimal price, int quantity) {
+    var rows =
+        Drivers.sessions()
+            .customer()
+            .findElements(By.cssSelector("#content .table-responsive tbody tr"));
+    assertEquals(rows.size(), 1, "Option scenario must contain exactly its owned cart line");
+    var cells = rows.get(0).findElements(By.tagName("td"));
+    assertEquals(Page.price(cells.get(4).getText()), price);
+    assertEquals(Page.price(cells.get(5).getText()), price.multiply(BigDecimal.valueOf(quantity)));
+  }
+
   public void requiredOptionsAndQuantity() {
+    BigDecimal base = Money.amount(Data.scenario("basePrice"));
+    BigDecimal plus = base.add(Money.amount(Data.scenario("fixedAddition")));
+    BigDecimal reduction =
+        base.multiply(new BigDecimal(Data.scenario("reductionPercent")))
+            .divide(new BigDecimal("100"), 2, RoundingMode.HALF_UP);
+    BigDecimal minus = base.subtract(reduction);
+    int quantity = Integer.parseInt(Data.scenario("quantity"));
     int id = product("options", Data.scenario("basePrice"), 100);
     c().data().options(id);
     c().admin().productInfo(id).click("a[href='#tab-option']");
@@ -33,11 +55,14 @@ public class ScenarioTests extends UiBase {
     var s = c().store().product(id).add(1);
     assertTrue(s.text(".text-danger").contains("required"));
     s.option("Plus").add(1).cart();
-    total("120.00");
-    s.quantity(2);
-    total("240.00");
+    cartLine(plus, 1);
+    total(plus);
+    s.quantity(quantity);
+    cartLine(plus, quantity);
+    total(plus.multiply(BigDecimal.valueOf(quantity)));
     s.removeAll().product(id).option("Minus").add(1).cart();
-    total("90.00");
+    cartLine(minus, 1);
+    total(minus);
     Allure.addAttachment(
         "capability gap",
         "OpenCart core supports fixed + and - option prices. The 10% reduction was converted to a"
@@ -45,6 +70,19 @@ public class ScenarioTests extends UiBase {
   }
 
   public void couponAndVoucher() {
+    BigDecimal eligible = Money.amount(Data.scenario("couponEligiblePrice"));
+    BigDecimal ineligible = Money.amount(Data.scenario("couponIneligiblePrice"));
+    int quantity = Integer.parseInt(Data.scenario("quantity"));
+    BigDecimal eligibleTotal = eligible.multiply(BigDecimal.valueOf(quantity));
+    BigDecimal discount =
+        eligibleTotal
+            .multiply(new BigDecimal(Data.scenario("couponPercent")))
+            .divide(new BigDecimal("100"));
+    BigDecimal afterCoupon =
+        eligibleTotal.add(ineligible).subtract(discount).setScale(2, RoundingMode.HALF_UP);
+    assertTrue(eligible.compareTo(Money.amount(Data.scenario("couponMinimum"))) < 0);
+    assertTrue(
+        eligibleTotal.add(ineligible).compareTo(Money.amount(Data.scenario("couponMinimum"))) >= 0);
     var data = c().data();
     String cat = data.name("eligible");
     int category = data.category(cat);
@@ -55,12 +93,12 @@ public class ScenarioTests extends UiBase {
     c().admin().coupon(data, coupon, cat).voucher(data, voucher);
     var s = c().store().product(a).add(1).cart().coupon(coupon);
     assertTrue(s.text(".alert-danger").contains("invalid"));
-    total("100.03");
-    s.quantity(2);
+    total(eligible);
+    s.quantity(quantity);
     s.product(b).add(1).cart().coupon(coupon);
-    total("230.12");
+    total(afterCoupon);
     s.voucher(voucher);
-    total("205.12");
+    total(afterCoupon.subtract(Money.amount(Data.scenario("voucherValue"))));
     Allure.addAttachment(
         "voucher remainder gap",
         "Core cart displays the voucher deduction. A customer-facing remaining-balance label is not"
@@ -85,6 +123,16 @@ public class ScenarioTests extends UiBase {
             new OrderSnapshot.Line(
                 c().data().name("lifecycle"), 2, Money.amount("100"), Money.amount("200"))));
     assertEquals(checkoutSnapshot.totals().get("Total"), Money.amount("200"));
+    assertEquals(
+        checkoutSnapshot.totals(),
+        Map.of(
+            "Sub-Total",
+            Money.amount("200"),
+            "Free Shipping",
+            Money.amount("0"),
+            "Total",
+            Money.amount("200")),
+        "Unexpected checkout charges");
     checkout.confirm();
     int order =
         Database.id(
@@ -227,15 +275,25 @@ public class ScenarioTests extends UiBase {
       c().admin().click("button[form='form-currency']");
       c().admin().ajax();
       int id = product("currency", "10", 100);
+      BigDecimal rate = new BigDecimal(Data.scenario("exchangeRate"));
+      BigDecimal expectedUnit =
+          new BigDecimal("10").multiply(rate).setScale(2, RoundingMode.HALF_UP);
+      BigDecimal expectedTotal =
+          new BigDecimal("20").multiply(rate).setScale(2, RoundingMode.HALF_UP);
       c().admin().route("localisation/currency");
       assertTrue(c().admin().text("#content").contains("QAX"));
       var s = c().store().product(id).currency();
-      assertTrue(s.text("#content").contains("12.35"));
+      assertEquals(Page.price(s.text("#content .list-unstyled h2")), expectedUnit);
       s.add(2).cart();
-      total("24.69");
+      total(expectedTotal);
       s.register(data, "currency");
       var checkout = new CheckoutPage(Drivers.sessions().customer()).prepare();
-      assertTrue(checkout.summary().values().stream().anyMatch(v -> v.contains("24.69")));
+      var convertedOrder =
+          OrderSnapshot.read(
+              Drivers.sessions().customer(), "#collapse-checkout-confirm", data.name("currency"));
+      assertEquals(convertedOrder.totals().get("Total"), expectedTotal);
+      assertEquals(convertedOrder.lines().get(0).unitPrice(), expectedUnit);
+      assertEquals(convertedOrder.lines().get(0).total(), expectedTotal);
       for (String route : List.of("checkout/cart", "account/account", "account/order")) {
         s.open(route);
         String selector = route.equals("account/account") ? "#content h2" : "#content h1";

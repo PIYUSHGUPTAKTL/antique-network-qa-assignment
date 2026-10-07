@@ -11,10 +11,10 @@ This is a reviewable assignment submission, with reproducible Java frameworks an
 
 The corrected API workflow passed 45/45 executions on GitHub with Temurin JDK 17. Both integration seeds passed 15/15; unit tests passed 13/13; loans and reset each passed 1/1. Evidence: run-report/github-ci/results.json and https://github.com/PIYUSHGUPTAKTL/antique-network-qa-assignment/actions/runs/37611113628. The initial GitHub run failed because its startup used the original unpatched bank. Hosted UI results remain separate from this API result.
 
-## Verification environment
+## Historical original baseline environment
 Windows 11, JDK 24 compiling with Java release 17, Maven 3.9.9, local Docker Linux containers. Application images/source are pinned in Compose and the store Dockerfile. Browser verification uses installed headless Chrome and Firefox with two parallel test methods and separate admin/customer sessions. GitHub Actions API verification has now passed as recorded above; the older baseline sections below describe historical local evidence. Docker Grid configuration is supplied; full Grid scenarios have not been executed locally.
 
-## UI requirements
+## UI requirements and declared capability limits
 | Scenario | Implemented verification | Limits |
 |---|---|---|
 | Required options and quantity | Required validation; fixed addition; reduction; quantity recalculation | Native percentage option pricing is unavailable; reduction fixture converts 10% to a fixed amount |
@@ -27,7 +27,7 @@ Windows 11, JDK 24 compiling with Java release 17, Maven 3.9.9, local Docker Lin
 
 Categories, option values, category associations and currency fixtures use owned, parameterized SQL. Products, promotions, customers, orders and returns use browser flows. Consequently full admin-UI-only fixture setup is not claimed. UUID markers register cleanup before browser submission, so a success followed by a timeout still leaves discoverable owned data. Browser actions use explicit waits; failure evidence includes screenshot, DOM and console collection result. No automatic retries.
 
-## API requirements and observations
+## Historical original API observations
 | Requirement | Result / implementation |
 |---|---|
 | Fresh data/session | Unique short HTML registration, cookie capture, REST login, owned accounts per case |
@@ -45,7 +45,7 @@ Both final local integration attempts ran 15 tests: **5 passed, 10 failed, 0 ski
 
 Public reproduction is bounded to synthetic customers. The public service has no per-customer deletion; no global reset or loan administration was performed there. Local Compose teardown removes owned ephemeral bank data. Evidence JSON contains observed responses and balances without registration passwords.
 
-## Execution evidence
+## Historical original execution evidence
 The five result-aggregation utility tests passed, including skip handling, missing runs, duplicate JUnit exports and Windows case-insensitive TestNG exports. The API Maven Wrapper also executed the 11 framework tests successfully. Class-file major version 61 confirms the Java 17 compilation target; the hosted API JDK 17 run is now verified above; no native local JDK 17 execution is claimed.
 
 Cart-navigation synchronization was changed before the revised matrix. The exact final-total label assertion was strengthened during verification; the subsequent Firefox repeats and the subtotal-only framework regression check cover that stricter oracle. Earlier revised Chrome attempts already exercised discounted totals that differ from subtotal. Firefox then exposed input interaction during a coupon accordion animation; an expanded-state wait was added during the matrix. Failures remain in the measured rate, and a focused follow-up validates the final coupon flow. This does not justify discarding observed results.
@@ -53,6 +53,10 @@ Cart-navigation synchronization was changed before the revised matrix. The exact
 Final browser verification ran **42 scenario executions across six attempts (Chrome x3, Firefox x3)**: 41 passed, 1 failed, 0 errors, 0 skipped. The measured first-attempt pass rate is **97.62%**; the 95% target is met. No automatic retries were used. UI framework checks: 6 tests, 0 failures, 0 errors, 0 skips.
 
 Essential original raw Surefire XML and result summaries are under `evidence/release/`; duplicate HTML/Allure assets and development diagnostic samples are retained locally rather than in this trimmed repository. `verification.json` records per-run counts/failures and execution boundaries; `ui-summary.json` records the measured rate. TestNG duplicate JUnit exports are excluded. Development screenshot/DOM diagnostics are excluded from release rates and retained locally outside this essential repository.
+
+## Submission review fixes
+
+See run-report/Reviewer_Report.html for the independent review and corrected assertion/CI gaps. Current post-review raw evidence and hosted run IDs are saved under run-report/reviewer-verification/ after the workflows complete. Earlier hosted UI verification passed 42/42 scenarios across all six named attempts (100%), on commit 66c3df1. Earlier hosted API verification passed 45/45. Those results predate the additional regression checks and strengthened oracles; they are not presented as verification of later changes.
 
 ## Submission boundary
 Source, Maven Wrapper, Compose, JSON test data, docs, CI workflows and captured evidence are included. The essential source and evidence are published under PIYUSHGUPTAKTL/antique-network-qa-assignment. The repository is public and reviewers can view it without signing in. Sending the assignment email is the remaining submission step. Read DECISIONS.md for AI assistance disclosure.

@@ -230,6 +230,7 @@ public class BankTests extends ApiBase {
     List<Future<Response>> futures = new ArrayList<>();
     List<String> outcomes = new ArrayList<>();
     int accepted = 0;
+    int rejectedForFunds = 0;
     boolean readyInTime = false;
     boolean terminated = false;
     try {
@@ -249,6 +250,9 @@ public class BankTests extends ApiBase {
           Response r = future.get(30, TimeUnit.SECONDS);
           outcomes.add(r.statusCode() + " " + r.asString());
           if (r.statusCode() >= 200 && r.statusCode() < 300) accepted++;
+          else if (r.statusCode() == 400
+              && r.contentType().contains("text/plain")
+              && r.asString().equals("Invalid banking request")) rejectedForFunds++;
         } catch (Exception e) {
           outcomes.add("WORKER FAILED " + e.getClass().getSimpleName());
           future.cancel(true);
@@ -282,6 +286,14 @@ public class BankTests extends ApiBase {
     sa.assertTrue(readyInTime, "Workers were not all ready before release");
     sa.assertTrue(terminated, "Workers did not terminate; observation may be incomplete");
     sa.assertEquals(outcomes.size(), 10);
+    sa.assertEquals(
+        accepted + rejectedForFunds,
+        10,
+        "Every worker must succeed or return a consistent insufficient-funds rejection");
+    sa.assertEquals(
+        accepted,
+        start.divideToIntegralValue(each).intValueExact(),
+        "Affordable withdrawals must succeed; blanket rejection cannot prove concurrency safety");
     sa.assertFalse(
         outcomes.stream().anyMatch(v -> v.startsWith("WORKER FAILED")), "Incomplete outcomes");
     sa.assertEquals(
